@@ -4,7 +4,11 @@ EMMlab is a ground-truth laboratory for Exceptional Model Mining (EMM) on path m
 
 ## Requirements
 
-Python 3.12 with [uv](https://docs.astral.sh/uv/), and Node with pnpm for the web app.
+- macOS or Linux, with `make`
+- Python 3.12 or newer, installed through [uv](https://docs.astral.sh/uv/) (uv can fetch Python itself)
+- Node 22 and pnpm 10 for the web app (tested with these versions); if `pnpm` is missing, run `npm install -g pnpm@10` first
+
+`make sync` then installs every Python and web library from the lock files (`uv.lock`, `web/pnpm-lock.yaml`), so there is nothing to install by hand.
 
 ## Quickstart
 
