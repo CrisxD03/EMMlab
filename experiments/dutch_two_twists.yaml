@@ -1,0 +1,76 @@
+# Experiment World (A3, experiments 0-2): dutch_tracks with two planted twists on different paths.
+#
+# Same population, latents, arrows and level shifts as the dutch_tracks preset (track shares from PISA; gender,
+# track and income level shifts as background; gender stays a "should not be found" control). Differences:
+#   - twist A (two conditions): feedback -> grade differs for school_type=vmbo AND ses=low;
+#   - twist B (one condition):  motivation -> extra differs for ses=high (no overlap with A);
+#   - the preset's motivation -> grade twist is removed;
+#   - 20 students per school; the number of schools and both deltas are set by the experiments.
+# Income and track are correlated (low income is concentrated in VMBO), so twist A can be confused with
+# ses=low or school_type=vmbo alone: with steps (b)+(c) on, A AND B is dropped when A alone scores as high.
+name: dutch_two_twists
+layout_direction: RIGHT  # draw the canvas left to right
+description: "dutch_tracks with two planted twists (A: feedback -> grade for vmbo AND low income; B: motivation -> extra for high income)."
+schools:
+  n_schools: 100
+  students_per_school: {dist: fixed, n: 20}
+attributes:
+  school_type:
+    level: school
+    values: {vmbo: 0.515, havo: 0.218, vwo: 0.267}
+  ses:
+    level: student
+    ordinal: true
+    values: {low: 0.29, mid: 0.46, high: 0.25}  # implied by the table and the track shares
+    depends_on: school_type
+    table:
+      vmbo: {low: 0.40, mid: 0.45, high: 0.15}
+      havo: {low: 0.25, mid: 0.50, high: 0.25}
+      vwo: {low: 0.12, mid: 0.43, high: 0.45}
+    label: family income
+  gender:
+    level: student
+    values: {m: 0.5, f: 0.5}
+nodes:
+  feedback:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: feedback from teachers
+  sport:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: sport enjoyment
+  motivation:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: motivation to study
+  extra:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: extracurricular activities
+  grade:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: standardized exam grade
+arrows:
+  - {from: feedback, to: motivation, slope: 0.25}
+  - {from: sport, to: extra, slope: 0.30}
+  - {from: motivation, to: extra, slope: 0.20}
+  - {from: motivation, to: grade, slope: 0.25}
+  - {from: feedback, to: grade, slope: 0.10}
+  - {from: extra, to: grade, slope: 0.10}
+shifts:
+  - {when: {gender: f}, target: feedback, delta: 0.10}
+  - {when: {gender: f}, target: sport, delta: -0.30}
+  - {when: {gender: f}, target: motivation, delta: 0.10}
+  - {when: {school_type: havo}, target: motivation, delta: 0.05}
+  - {when: {school_type: vwo}, target: motivation, delta: 0.15}
+  - {when: {ses: high}, target: extra, delta: 0.15}
+  - {when: {gender: f}, target: grade, delta: 0.15}
+  - {when: {school_type: havo}, target: grade, delta: 0.30}
+  - {when: {school_type: vwo}, target: grade, delta: 0.55}
+  - {when: {ses: mid}, target: grade, delta: 0.10}
+  - {when: {ses: high}, target: grade, delta: 0.20}
+twists:
+  - {arrow: feedback -> grade, when: {school_type: vmbo, ses: low}, delta: 0.2, label: "A: feedback -> grade, vmbo AND low income"}
+  - {arrow: motivation -> extra, when: {ses: high}, delta: 0.2, label: "B: motivation -> extra, high income"}

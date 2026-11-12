@@ -1,0 +1,36 @@
+# Experiment 3a: skewed constructs, linear relations.
+#
+# Same World, grid, seeds and grading as Experiment 1. Each variable's student-level noise is skewed with the
+# same mean and SD, so every mean, slope and truth is unchanged; only the shape differs. Directions: grade and
+# motivation have a left tail (most do fine, a few very badly), extra, feedback and sport a right tail (most a
+# little, a few a lot). Skewed noise is a quantile transform of the same normal draw, so the variants are paired.
+#
+# Run: uv run python experiments/run_experiments.py exp3a_skew
+name: exp3a_skew
+aim: Recovery of the twists when the latent variables are skewed (same means, SDs and slopes)
+world: dutch_two_twists.yaml
+preset: current
+tau: 0.8
+n_sim: 100
+worlds:  # World variants (dotted paths into the World); the runner turns these into a factor on `world`
+  normal: {}
+  skew1:
+    nodes.grade.noise: {skew: -1}
+    nodes.motivation.noise: {skew: -1}
+    nodes.extra.noise: {skew: 1}
+    nodes.feedback.noise: {skew: 1}
+    nodes.sport.noise: {skew: 1}
+  skew2:
+    nodes.grade.noise: {skew: -2}
+    nodes.motivation.noise: {skew: -2}
+    nodes.extra.noise: {skew: 2}
+    nodes.feedback.noise: {skew: 2}
+    nodes.sport.noise: {skew: 2}
+factors:
+  - path: method.emm.quality
+    levels: [current, ent_z, cook]
+  - path: world.schools.n_schools
+    levels: [50, 100, 250, 500]
+  - path: world.twists.0.delta
+    linked: [world.twists.1.delta]
+    levels: [0.05, 0.1, 0.2, 0.4]

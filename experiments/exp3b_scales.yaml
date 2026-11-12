@@ -1,0 +1,42 @@
+# Experiment 3b: linear constructs, imperfect instruments.
+#
+# Same World, grid, seeds and grading as Experiment 1. The causal relations stay linear in the latent traits;
+# only what the researcher records is transformed (cut points in SD units of the latent's pooled distribution):
+#   ceiling: grade is an exam with a maximum score (16% at the maximum; VWO 26%, VMBO 10%);
+#   counts:  extra is the number of activities (42% none, long right tail);
+#   scales:  motivation, feedback and sport are 5-point agree scales (most students agree);
+#   all:     everything at once.
+# Truths come from a large simulation on the observed scale; findings that exist only because of the
+# instrument are classed scale_artifact.
+#
+# Run: uv run python experiments/run_experiments.py exp3b_scales
+name: exp3b_scales
+aim: Recovery of the twists, and new subgroups, when the researcher's instruments are bounded
+world: dutch_two_twists.yaml
+preset: current
+tau: 0.8
+n_sim: 100
+worlds:
+  normal: {}
+  ceiling:
+    nodes.grade.scale: {type: censored, high: 1.0}
+  counts:
+    nodes.extra.scale: {type: count, mean: 1.2, spread: 0.8}
+  scales:
+    nodes.motivation.scale: {type: ordinal, cuts: [-1.5, -0.8, -0.1, 0.7]}
+    nodes.feedback.scale: {type: ordinal, cuts: [-1.5, -0.8, -0.1, 0.7]}
+    nodes.sport.scale: {type: ordinal, cuts: [-1.5, -0.8, -0.1, 0.7]}
+  all:
+    nodes.grade.scale: {type: censored, high: 1.0}
+    nodes.extra.scale: {type: count, mean: 1.2, spread: 0.8}
+    nodes.motivation.scale: {type: ordinal, cuts: [-1.5, -0.8, -0.1, 0.7]}
+    nodes.feedback.scale: {type: ordinal, cuts: [-1.5, -0.8, -0.1, 0.7]}
+    nodes.sport.scale: {type: ordinal, cuts: [-1.5, -0.8, -0.1, 0.7]}
+factors:
+  - path: method.emm.quality
+    levels: [current, ent_z, cook]
+  - path: world.schools.n_schools
+    levels: [50, 100, 250, 500]
+  - path: world.twists.0.delta
+    linked: [world.twists.1.delta]
+    levels: [0.05, 0.1, 0.2, 0.4]

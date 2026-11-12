@@ -1,0 +1,173 @@
+{
+ "World": {
+  "definition": "The true, data-generating model. Contains everything, including twists.",
+  "source": "tool_vision.md"
+ },
+ "Variable": {
+  "definition": "Any column: a Latent or an Attribute.",
+  "source": "tool_vision.md"
+ },
+ "Latent": {
+  "definition": "An attitude or outcome in the researcher's model (feedback, self-efficacy, achievement…). One column each.",
+  "source": "tool_vision.md"
+ },
+ "Attribute": {
+  "definition": "A student or school descriptor that EMM searches over (gender, school type…).",
+  "source": "tool_vision.md"
+ },
+ "Level": {
+  "definition": "Student or School. School-level values are shared by all students in the school.",
+  "source": "tool_vision.md"
+ },
+ "Root": {
+  "definition": "A Variable with no incoming arrows. Specified by a Distribution.",
+  "source": "tool_vision.md"
+ },
+ "Child": {
+  "definition": "A Variable with incoming arrows. Specified by a Recipe.",
+  "source": "tool_vision.md"
+ },
+ "Distribution": {
+  "definition": "Proportions (categorical) or mean + SD (continuous) for a Root.",
+  "source": "tool_vision.md"
+ },
+ "Recipe": {
+  "definition": "Intercept + noise SD for a Child; slopes live on its incoming arrows.",
+  "source": "tool_vision.md"
+ },
+ "Derived": {
+  "definition": "A value computed from the World, never typed: a Child's mean and SD, total effects.",
+  "source": "tool_vision.md"
+ },
+ "Arrow": {
+  "definition": "A direct cause with a slope.",
+  "source": "tool_vision.md"
+ },
+ "Level Shift": {
+  "definition": "An Arrow from an Attribute into a Latent. The attribute is added. Moves averages, not slopes.",
+  "source": "tool_vision.md"
+ },
+ "Twist": {
+  "definition": "A planted subgroup: a slope change on an existing Arrow, under a Condition. The attribute is multiplied.",
+  "source": "tool_vision.md",
+  "amendment": "Design: Δ per value relative to the arrow's baseline; twists on different attributes add."
+ },
+ "Condition": {
+  "definition": "Which students a Twist applies to: one attribute equal to one value.",
+  "source": "tool_vision.md"
+ },
+ "Decoy": {
+  "definition": "An Attribute that affects nothing. Tests for false positives.",
+  "source": "tool_vision.md"
+ },
+ "Seed": {
+  "definition": "Makes generation reproducible. World + Seed = one exact Dataset.",
+  "source": "tool_vision.md"
+ },
+ "True Quantities": {
+  "definition": "Direct effects, total effects, means, SDs and standardized coefficients, computed from the World.",
+  "source": "tool_vision.md"
+ },
+ "Dataset": {
+  "definition": "One row per student. Synthetic (has truth) or Real (no truth).",
+  "source": "tool_vision.md"
+ },
+ "Frame": {
+  "definition": "Which rows and schools a Dataset contains, and how they were selected.",
+  "source": "tool_vision.md"
+ },
+ "Researcher's Model": {
+  "definition": "Latents + Arrows between them. No attributes, no twists. What gets fitted, with OLS.",
+  "source": "tool_vision.md"
+ },
+ "Normalisation": {
+  "definition": "None, school-mean-centered, or within-school standardized.",
+  "source": "tool_vision.md"
+ },
+ "Residualization": {
+  "definition": "Clicking a node to show its total effect. Triangle or chain case.",
+  "source": "tool_vision.md",
+  "amendment": "Design D4: subtract X's model-implied total effect from every descendant of X used as a regressor."
+ },
+ "Search Space": {
+  "definition": "Attributes + binning + depth + minimum sizes + optional filter.",
+  "source": "tool_vision.md"
+ },
+ "Quality Function": {
+  "definition": "How EMM scores exceptionality.",
+  "source": "tool_vision.md"
+ },
+ "Comparison Baseline": {
+  "definition": "Complement or Population.",
+  "source": "tool_vision.md"
+ },
+ "Analysis Run": {
+  "definition": "Dataset + model + settings + search space + EMM settings → ranked Subgroups.",
+  "source": "tool_vision.md"
+ },
+ "Subgroup": {
+  "definition": "A description (e.g. school_type = rich) and the students it covers.",
+  "source": "tool_vision.md"
+ },
+ "Fragile": {
+  "definition": "A subgroup with fewer than 25 schools.",
+  "source": "tool_vision.md",
+  "amendment": "Design T5: tiers use effective schools (schools with ≥3 subgroup members): < 20 Unreliable, 20–49 Fragile, ≥ 50 OK. The current preset also reports the < 25 nominal-schools rule."
+ },
+ "Bootstrap": {
+  "definition": "School-cluster resampling, everything recomputed inside each replicate.",
+  "source": "tool_vision.md"
+ },
+ "Report": {
+  "definition": "Differing paths, intervals, equations, means, SDs, meaning, share of variance.",
+  "source": "tool_vision.md"
+ },
+ "Scorecard": {
+  "definition": "Hits, misses, false positives, step checks. Synthetic only.",
+  "source": "tool_vision.md"
+ },
+ "Experiment": {
+  "definition": "Runs that vary one thing at a time.",
+  "source": "tool_vision.md"
+ },
+ "Provenance": {
+  "definition": "Everything needed to regenerate any number.",
+  "source": "tool_vision.md"
+ },
+ "Unreliable": {
+  "definition": "Fewer than 20 effective schools: intervals shown greyed out (design T5).",
+  "source": "system_design.md"
+ },
+ "Unstable": {
+  "definition": "A finding whose hit rate across replications lies between 0.2 and 0.8: it would flip on reseeding (design T5).",
+  "source": "system_design.md"
+ },
+ "T1 Structural truth": {
+  "definition": "The World's slopes per cell: direct and total effects.",
+  "source": "system_design.md"
+ },
+ "T2 Causal target": {
+  "definition": "The π-weighted average effect over the analysed (sub)population.",
+  "source": "system_design.md"
+ },
+ "T3 Step estimand": {
+  "definition": "What this exact model, on this exact filtered and transformed population, converges to.",
+  "source": "system_design.md"
+ },
+ "Method preset": {
+  "definition": "current = faithful replica of the researcher's pipeline; recommended = research-backed fixes (design T1).",
+  "source": "system_design.md"
+ },
+ "Null World": {
+  "definition": "The same World with every twist removed; its replications measure false positives directly (design T3).",
+  "source": "system_design.md"
+ },
+ "MCSE": {
+  "definition": "Monte Carlo standard error: the uncertainty of a rate estimated from a finite number of replications.",
+  "source": "system_design.md"
+ },
+ "Common metric": {
+  "definition": "Variables standardized once on the full sample; subgroup slopes are compared on that scale (design D2).",
+  "source": "system_design.md"
+ }
+}

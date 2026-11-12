@@ -1,0 +1,401 @@
+cond,preset,rep,n,n_schools_fit,schools,top_quality,n_findings,top_finding,fp_null,fp_decoy,fp_phantom_downstream,fp_variance_artifact,fp_level_shift_leak,fp_proxy,fp_scale_artifact,quality
+0,current,0,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,1,1000,50,50,0.5881687773541907,1,ses=low,1,0,0,0,0,0,0,current
+0,current,2,1000,50,50,1.1333741548148464,2,gender=f AND school_type=vmbo,1,0,0,0,1,0,0,current
+0,current,3,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,4,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,5,1000,50,50,0.36090477647750296,2,gender=f AND ses=high,2,0,0,0,0,0,0,current
+0,current,6,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,7,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,8,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,9,1000,50,50,0.6851880420827186,1,ses=mid,1,0,0,0,0,0,0,current
+0,current,10,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,11,1000,50,50,0.38448131698095145,1,gender=m AND school_type=vwo,1,0,0,0,0,0,0,current
+0,current,12,1000,50,50,0.5165944939436616,1,gender=f AND ses=mid,1,0,0,0,0,0,0,current
+0,current,13,1000,50,50,0.5802520877063548,2,gender=m AND school_type=vmbo,2,0,0,0,0,0,0,current
+0,current,14,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,15,1000,50,50,0.554513365398235,1,gender=m AND ses=mid,1,0,0,0,0,0,0,current
+0,current,16,1000,50,50,0.4363384917718372,2,gender=m AND ses=low,2,0,0,0,0,0,0,current
+0,current,17,1000,50,50,0.5045332862408529,1,gender=m AND ses=mid,1,0,0,0,0,0,0,current
+0,current,18,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,19,1000,50,50,0.37677016125643675,3,gender=f AND school_type=vwo,3,0,0,0,0,0,0,current
+0,current,20,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,21,1000,50,50,0.3649278148520909,1,school_type=havo AND ses=mid,1,0,0,0,0,0,0,current
+0,current,22,1000,50,50,0.35887877344212193,1,gender=m AND ses=high,1,0,0,0,0,0,0,current
+0,current,23,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,24,1000,50,50,0.5368484029613974,1,gender=m AND ses=mid,1,0,0,0,0,0,0,current
+0,current,25,1000,50,50,0.5645217214043494,2,gender=m AND school_type=vmbo,2,0,0,0,0,0,0,current
+0,current,26,1000,50,50,0.5017855967950094,1,gender=m AND ses=mid,1,0,0,0,0,0,0,current
+0,current,27,1000,50,50,0.6861689334163775,3,ses=mid,3,0,0,0,0,0,0,current
+0,current,28,1000,50,50,0.3527419561590455,1,gender=f AND ses=high,1,0,0,0,0,0,0,current
+0,current,29,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,30,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,31,1000,50,50,0.5269079614313803,1,school_type=havo,0,0,0,0,1,0,0,current
+0,current,32,1000,50,50,0.5634310926056619,2,gender=f AND school_type=vmbo,1,0,0,0,1,0,0,current
+0,current,33,1000,50,50,0.36090477647750296,1,school_type=vwo AND ses=high,1,0,0,0,0,0,0,current
+0,current,34,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,35,1000,50,50,0.6158626971929863,3,ses=low,2,0,0,0,1,0,0,current
+0,current,36,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,37,1000,50,50,0.41922414160647103,1,gender=f AND ses=low,1,0,0,0,0,0,0,current
+0,current,38,1000,50,50,0.5730569171314204,1,school_type=vwo,1,0,0,0,0,0,0,current
+0,current,39,1000,50,50,0.5086085199812576,1,ses=low AND school_type=vmbo,1,0,0,0,0,0,0,current
+0,current,40,1000,50,50,0.5730569171314204,3,school_type=vwo,3,0,0,0,0,0,0,current
+0,current,41,1000,50,50,0.693145180558612,1,gender=m,1,0,0,0,0,0,0,current
+0,current,42,1000,50,50,0.6892701675539441,2,ses=mid,2,0,0,0,0,0,0,current
+0,current,43,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,44,1000,50,50,0.575138476441581,2,gender=f AND school_type=vmbo,2,0,0,0,0,0,0,current
+0,current,45,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,46,1000,50,50,0.3568430183883457,1,school_type=vwo AND ses=mid,1,0,0,0,0,0,0,current
+0,current,47,1000,50,50,0.5730569171314204,2,school_type=vwo,2,0,0,0,0,0,0,current
+0,current,48,1000,50,50,0.34019677697199946,2,gender=f AND school_type=havo,2,0,0,0,0,0,0,current
+0,current,49,1000,50,50,0.5416816936981409,2,ses=high,2,0,0,0,0,0,0,current
+0,current,50,1000,50,50,0.44132439349365254,1,gender=f AND ses=low,1,0,0,0,0,0,0,current
+0,current,51,1000,50,50,0.6870849202888889,1,ses=mid,1,0,0,0,0,0,0,current
+0,current,52,1000,50,50,0.5730569171314204,1,gender=f AND school_type=vmbo,1,0,0,0,0,0,0,current
+0,current,53,1000,50,50,0.5590152433017068,2,ses=high,1,0,0,0,1,0,0,current
+0,current,54,1000,50,50,0.40131622711833936,2,gender=f AND ses=high,2,0,0,0,0,0,0,current
+0,current,55,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,56,1000,50,50,0.3994800137386857,2,gender=m AND ses=low,2,0,0,0,0,0,0,current
+0,current,57,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,58,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,59,1000,50,50,0.5567751167156654,1,gender=m AND ses=mid,1,0,0,0,0,0,0,current
+0,current,60,1000,50,50,0.5269079614313803,2,school_type=havo,2,0,0,0,0,0,0,current
+0,current,61,1000,50,50,0.3957821603968735,1,gender=f AND school_type=vwo,1,0,0,0,0,0,0,current
+0,current,62,1000,50,50,0.3669249912727096,1,gender=f AND school_type=havo,1,0,0,0,0,0,0,current
+0,current,63,1000,50,50,0.6923469670899615,1,school_type=vmbo,1,0,0,0,0,0,0,current
+0,current,64,1000,50,50,0.593895300697922,2,ses=low,2,0,0,0,0,0,0,current
+0,current,65,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,66,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,67,1000,50,50,0.6929851718108113,1,gender=m,1,0,0,0,0,0,0,current
+0,current,68,1000,50,50,0.3486009842646068,2,ses=high AND school_type=vwo,2,0,0,0,0,0,0,current
+0,current,69,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,70,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,71,1000,50,50,0.5269079614313803,2,school_type=havo,1,0,0,0,1,0,0,current
+0,current,72,1000,50,50,0.3748196691868336,1,gender=f AND ses=high,1,0,0,0,0,0,0,current
+0,current,73,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,74,1000,50,50,0.5179044161815332,1,gender=f AND ses=mid,1,0,0,0,0,0,0,current
+0,current,75,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,76,1000,50,50,0.4244397744447496,1,gender=m AND ses=low,1,0,0,0,0,0,0,current
+0,current,77,1000,50,50,0.691994737783755,2,gender=m,2,0,0,0,0,0,0,current
+0,current,78,1000,50,50,0.5782220581743532,1,gender=m AND school_type=vmbo,1,0,0,0,0,0,0,current
+0,current,79,1000,50,50,0.544064595967142,1,ses=high,1,0,0,0,0,0,0,current
+0,current,80,1000,50,50,0.5634310926056619,1,ses=high,1,0,0,0,0,0,0,current
+0,current,81,1000,50,50,0.5428759426526433,1,gender=f AND ses=mid,1,0,0,0,0,0,0,current
+0,current,82,1000,50,50,0.392050052059914,1,gender=f AND ses=high,1,0,0,0,0,0,0,current
+0,current,83,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,84,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,85,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,86,1000,50,50,0.3669249912727096,1,gender=m AND ses=high,1,0,0,0,0,0,0,current
+0,current,87,1000,50,50,0.38448131698095145,1,gender=f AND ses=high,1,0,0,0,0,0,0,current
+0,current,88,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,89,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,90,1000,50,50,0.7535403225128735,3,ses=high AND gender=f,3,0,0,0,0,0,0,current
+0,current,91,1000,50,50,0.3806437787539232,2,gender=f AND ses=high,2,0,0,0,0,0,0,current
+0,current,92,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,93,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,94,1000,50,50,0.5269079614313803,1,school_type=havo,1,0,0,0,0,0,0,current
+0,current,95,1000,50,50,0.0,0,,0,0,0,0,0,0,0,current
+0,current,96,1000,50,50,0.5590152433017068,1,gender=f AND ses=mid,1,0,0,0,0,0,0,current
+0,current,97,1000,50,50,0.38448131698095145,2,gender=m AND school_type=vwo,2,0,0,0,0,0,0,current
+0,current,98,1000,50,50,0.3669249912727096,1,ses=high AND school_type=vwo,1,0,0,0,0,0,0,current
+0,current,99,1000,50,50,0.5730569171314204,1,school_type=vwo,1,0,0,0,0,0,0,current
+4,current,0,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,1,2000,100,100,0.5269079614313803,2,school_type=havo,2,0,0,0,0,0,0,current
+4,current,2,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,3,2000,100,100,0.3348594506663922,1,school_type=havo AND ses=mid,1,0,0,0,0,0,0,current
+4,current,4,2000,100,100,0.37285997096092516,1,gender=f AND ses=high,1,0,0,0,0,0,0,current
+4,current,5,2000,100,100,0.583258840128597,1,school_type=vwo,1,0,0,0,0,0,0,current
+4,current,6,2000,100,100,0.36792002405977603,1,school_type=vwo AND ses=mid,1,0,0,0,0,0,0,current
+4,current,7,2000,100,100,0.3359322143596015,2,gender=m AND school_type=havo,2,0,0,0,0,0,0,current
+4,current,8,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,9,2000,100,100,0.6895303178873327,5,ses=mid,5,0,0,0,0,0,0,current
+4,current,10,2000,100,100,0.5720083476575564,2,ses=high,2,0,0,0,0,0,0,current
+4,current,11,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,12,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,13,2000,100,100,0.5735792519906938,1,ses=high,1,0,0,0,0,0,0,current
+4,current,14,2000,100,100,0.3863867062886037,2,gender=f AND ses=high,2,0,0,0,0,0,0,current
+4,current,15,2000,100,100,0.39485236148062597,2,gender=f AND ses=low,2,0,0,0,0,0,0,current
+4,current,16,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,17,2000,100,100,0.5269079614313803,2,school_type=havo,1,0,0,0,1,0,0,current
+4,current,18,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,19,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,20,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,21,2000,100,100,0.42009833834560234,3,gender=f AND ses=low,3,0,0,0,0,0,0,current
+4,current,22,2000,100,100,0.21581648345961607,1,school_type=havo AND ses=high,1,0,0,0,0,0,0,current
+4,current,23,2000,100,100,0.23107503235024013,1,school_type=havo AND ses=low,1,0,0,0,0,0,0,current
+4,current,24,2000,100,100,0.5243649481876823,2,gender=m AND ses=mid,2,0,0,0,0,0,0,current
+4,current,25,2000,100,100,0.5398797916423375,2,ses=mid AND school_type=vmbo,2,0,0,0,0,0,0,current
+4,current,26,2000,100,100,0.5550808370905805,1,gender=m AND school_type=vmbo,1,0,0,0,0,0,0,current
+4,current,27,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,28,2000,100,100,0.41393713039022373,3,gender=m AND ses=low,3,0,0,0,0,0,0,current
+4,current,29,2000,100,100,0.5350125432019086,2,gender=f AND ses=mid,2,0,0,0,0,0,0,current
+4,current,30,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,31,2000,100,100,0.3957821603968735,1,gender=f AND school_type=vwo,1,0,0,0,0,0,0,current
+4,current,32,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,33,2000,100,100,0.6929471672244782,2,school_type=vmbo,2,0,0,0,0,0,0,current
+4,current,34,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,35,2000,100,100,0.5269079614313803,1,school_type=havo,1,0,0,0,0,0,0,current
+4,current,36,2000,100,100,0.3496400027088714,2,gender=f AND school_type=havo,2,0,0,0,0,0,0,current
+4,current,37,2000,100,100,0.27998885013715985,1,school_type=vmbo AND ses=high,1,0,0,0,0,0,0,current
+4,current,38,2000,100,100,0.5192083729181044,1,ses=low AND school_type=vmbo,1,0,0,0,0,0,0,current
+4,current,39,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,40,2000,100,100,0.671864428719203,1,gender=f AND school_type=havo,1,0,0,0,0,0,0,current
+4,current,41,2000,100,100,0.5446568294654729,1,gender=f AND ses=mid,1,0,0,0,0,0,0,current
+4,current,42,2000,100,100,1.580723884294141,1,school_type=havo,1,0,0,0,0,0,0,current
+4,current,43,2000,100,100,0.5380652041508891,1,gender=m AND ses=mid,1,0,0,0,0,0,0,current
+4,current,44,2000,100,100,0.35377093922315794,2,school_type=vwo AND ses=mid,2,0,0,0,0,0,0,current
+4,current,45,2000,100,100,0.61789522132109,2,ses=low,2,0,0,0,0,0,0,current
+4,current,46,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,47,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,48,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,49,2000,100,100,0.6929471672244782,2,school_type=vmbo,2,0,0,0,0,0,0,current
+4,current,50,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,51,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,52,2000,100,100,0.5416816936981409,1,gender=f AND ses=mid,1,0,0,0,0,0,0,current
+4,current,53,2000,100,100,0.3806437787539232,1,gender=f AND ses=high,1,0,0,0,0,0,0,current
+4,current,54,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,55,2000,100,100,0.5650650454960258,1,gender=m AND school_type=vmbo,1,0,0,0,0,0,0,current
+4,current,56,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,57,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,58,2000,100,100,0.5688313232795487,1,gender=f AND school_type=vmbo,1,0,0,0,0,0,0,current
+4,current,59,2000,100,100,0.3496400027088714,1,gender=f AND school_type=havo,1,0,0,0,0,0,0,current
+4,current,60,2000,100,100,0.6091601703774071,2,ses=low,2,0,0,0,0,0,0,current
+4,current,61,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,62,2000,100,100,0.3939204149736461,1,gender=f AND ses=high,1,0,0,0,0,0,0,current
+4,current,63,2000,100,100,0.5410824656117083,3,gender=m AND ses=mid,2,0,0,0,1,0,0,current
+4,current,64,2000,100,100,0.5735792519906938,1,gender=f AND school_type=vmbo,0,0,0,0,1,0,0,current
+4,current,65,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,66,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,67,2000,100,100,0.3892282298303067,2,gender=m AND school_type=vwo,2,0,0,0,0,0,0,current
+4,current,68,2000,100,100,0.3598929894072265,1,school_type=vwo AND ses=mid,1,0,0,0,0,0,0,current
+4,current,69,2000,100,100,0.6894446086193585,2,ses=mid,2,0,0,0,0,0,0,current
+4,current,70,2000,100,100,0.41834796224769033,1,gender=f AND ses=low,1,0,0,0,0,0,0,current
+4,current,71,2000,100,100,0.34651533691866615,2,gender=f AND school_type=havo,2,0,0,0,0,0,0,current
+4,current,72,2000,100,100,0.6892701675539441,2,ses=mid,2,0,0,0,0,0,0,current
+4,current,73,2000,100,100,0.6925345554465463,1,gender=m,1,0,0,0,0,0,0,current
+4,current,74,2000,100,100,0.5714821097863767,1,gender=m AND school_type=vmbo,1,0,0,0,0,0,0,current
+4,current,75,2000,100,100,0.3486009842646068,1,gender=m AND school_type=havo,1,0,0,0,0,0,0,current
+4,current,76,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,77,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,78,2000,100,100,0.21012867014458944,1,school_type=havo AND ses=high,1,0,0,0,0,0,0,current
+4,current,79,2000,100,100,1.2122637708490596,2,ses=low,2,0,0,0,0,0,0,current
+4,current,80,2000,100,100,0.5910544590955195,2,ses=low,2,0,0,0,0,0,0,current
+4,current,81,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,82,2000,100,100,0.4121587218658618,1,gender=m AND school_type=vwo,0,0,0,0,1,0,0,current
+4,current,83,2000,100,100,0.5756556298910149,2,gender=m AND school_type=vmbo,2,0,0,0,0,0,0,current
+4,current,84,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,85,2000,100,100,0.3527419561590455,1,school_type=vwo AND ses=mid,1,0,0,0,0,0,0,current
+4,current,86,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,87,2000,100,100,0.5896172419032781,1,ses=low,1,0,0,0,0,0,0,current
+4,current,88,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,89,2000,100,100,0.40131622711833936,1,gender=m AND school_type=vwo,0,0,0,0,1,0,0,current
+4,current,90,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,91,2000,100,100,0.35479743762906285,1,ses=mid AND school_type=vwo,1,0,0,0,0,0,0,current
+4,current,92,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,93,2000,100,100,0.34231331619135297,1,school_type=vwo AND ses=mid,1,0,0,0,0,0,0,current
+4,current,94,2000,100,100,0.3228801767137002,1,school_type=havo AND ses=mid,1,0,0,0,0,0,0,current
+4,current,95,2000,100,100,0.6825126988651924,5,gender=f AND school_type=havo,5,0,0,0,0,0,0,current
+4,current,96,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+4,current,97,2000,100,100,0.36392565403384675,1,ses=mid AND school_type=vwo,1,0,0,0,0,0,0,current
+4,current,98,2000,100,100,0.3496400027088714,2,gender=f AND school_type=havo,2,0,0,0,0,0,0,current
+4,current,99,2000,100,100,0.0,0,,0,0,0,0,0,0,0,current
+8,current,0,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,1,5000,250,250,0.1395755254965328,1,ses=low AND school_type=vwo,1,0,0,0,0,0,0,current
+8,current,2,5000,250,250,0.5131606296175875,2,ses=low AND school_type=vmbo,2,0,0,0,0,0,0,current
+8,current,3,5000,250,250,0.35887877344212193,1,gender=m AND school_type=havo,1,0,0,0,0,0,0,current
+8,current,4,5000,250,250,0.41570747271728126,1,gender=m AND ses=low,1,0,0,0,0,0,0,current
+8,current,5,5000,250,250,0.341044643737899,1,school_type=havo AND ses=mid,1,0,0,0,0,0,0,current
+8,current,6,5000,250,250,0.36211572750187687,2,school_type=vwo AND ses=high,2,0,0,0,0,0,0,current
+8,current,7,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,8,5000,250,250,0.38752569211107973,2,gender=m AND school_type=vwo,2,0,0,0,0,0,0,current
+8,current,9,5000,250,250,0.5407222543883916,3,ses=mid AND school_type=vmbo,3,0,0,0,0,0,0,current
+8,current,10,5000,250,250,0.6926350931428009,4,school_type=vmbo,4,0,0,0,0,0,0,current
+8,current,11,5000,250,250,0.5115620193719665,3,ses=low AND school_type=vmbo,3,0,0,0,0,0,0,current
+8,current,12,5000,250,250,0.3406209193236555,1,gender=f AND school_type=havo,1,0,0,0,0,0,0,current
+8,current,13,5000,250,250,0.2792575696430287,1,school_type=vmbo AND ses=high,1,0,0,0,0,0,0,current
+8,current,14,5000,250,250,0.27088343165839796,1,school_type=vmbo AND ses=high,1,0,0,0,0,0,0,current
+8,current,15,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,16,5000,250,250,0.5812594319855474,1,school_type=vwo,1,0,0,0,0,0,0,current
+8,current,17,5000,250,250,0.6882980574793913,3,ses=mid,3,0,0,0,0,0,0,current
+8,current,18,5000,250,250,0.569044591008827,2,gender=m AND school_type=vmbo,2,0,0,0,0,0,0,current
+8,current,19,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,20,5000,250,250,0.2219857625074769,1,school_type=havo AND ses=high,1,0,0,0,0,0,0,current
+8,current,21,5000,250,250,1.0780691326047012,2,gender=m AND ses=mid,2,0,0,0,0,0,0,current
+8,current,22,5000,250,250,0.2792575696430287,2,ses=high AND school_type=vmbo,2,0,0,0,0,0,0,current
+8,current,23,5000,250,250,0.7258421997943973,3,school_type=vwo AND ses=high,3,0,0,0,0,0,0,current
+8,current,24,5000,250,250,0.5205063844754989,3,ses=low AND school_type=vmbo,3,0,0,0,0,0,0,current
+8,current,25,5000,250,250,0.13124869920165283,1,ses=low AND school_type=vwo,1,0,0,0,0,0,0,current
+8,current,26,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,27,5000,250,250,0.3629210998971987,2,ses=high AND school_type=vwo,2,0,0,0,0,0,0,current
+8,current,28,5000,250,250,0.3418908414908097,2,gender=m AND school_type=havo,2,0,0,0,0,0,0,current
+8,current,29,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,30,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,31,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,32,5000,250,250,0.42581870541923295,1,gender=m AND ses=low,1,0,0,0,0,0,0,current
+8,current,33,5000,250,250,0.431284935742842,2,gender=f AND ses=low,2,0,0,0,0,0,0,current
+8,current,34,5000,250,250,0.5812594319855474,1,school_type=vwo,1,0,0,0,0,0,0,current
+8,current,35,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,36,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,37,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,38,5000,250,250,0.3552073434183521,1,school_type=vwo AND ses=high,1,0,0,0,0,0,0,current
+8,current,39,5000,250,250,0.41957405790676405,1,gender=f AND ses=low,1,0,0,0,0,0,0,current
+8,current,40,5000,250,250,0.6930600580298041,1,gender=m,1,0,0,0,0,0,0,current
+8,current,41,5000,250,250,0.5353807406469565,3,gender=m AND ses=mid,3,0,0,0,0,0,0,current
+8,current,42,5000,250,250,0.78634661391162,2,gender=f AND school_type=vwo,2,0,0,0,0,0,0,current
+8,current,43,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,44,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,45,5000,250,250,1.1385152976643331,3,gender=m AND school_type=vmbo,3,0,0,0,0,0,0,current
+8,current,46,5000,250,250,0.6926350931428009,3,school_type=vmbo,3,0,0,0,0,0,0,current
+8,current,47,5000,250,250,0.3372160201884903,1,school_type=havo AND ses=mid,1,0,0,0,0,0,0,current
+8,current,48,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,49,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,50,5000,250,250,0.561895272884829,1,gender=f AND school_type=vmbo,1,0,0,0,0,0,0,current
+8,current,51,5000,250,250,0.2694843363595335,2,school_type=vwo AND ses=low,2,0,0,0,0,0,0,current
+8,current,52,5000,250,250,0.5738920298783764,2,ses=high,2,0,0,0,0,0,0,current
+8,current,53,5000,250,250,0.1456954970133177,1,school_type=vwo AND ses=low,1,0,0,0,0,0,0,current
+8,current,54,5000,250,250,0.13543670210765607,1,school_type=vwo AND ses=low,1,0,0,0,0,0,0,current
+8,current,55,5000,250,250,0.611202840343332,1,ses=low,1,0,0,0,0,0,0,current
+8,current,56,5000,250,250,0.5643040205045879,4,ses=high,4,0,0,0,0,0,0,current
+8,current,57,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,58,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,59,5000,250,250,0.5397592144406971,1,gender=f AND ses=mid,1,0,0,0,0,0,0,current
+8,current,60,5000,250,250,0.3946661442023457,1,gender=m AND school_type=vwo,0,0,0,0,1,0,0,current
+8,current,61,5000,250,250,0.5533743429353012,3,ses=mid AND school_type=vmbo,3,0,0,0,0,0,0,current
+8,current,62,5000,250,250,0.20086409145536885,2,school_type=havo AND ses=high,2,0,0,0,0,0,0,current
+8,current,63,5000,250,250,0.34399906959004556,1,gender=m AND school_type=havo,1,0,0,0,0,0,0,current
+8,current,64,5000,250,250,0.40785735148970104,4,gender=f AND ses=low,4,0,0,0,0,0,0,current
+8,current,65,5000,250,250,0.5477145887623387,1,ses=high AND school_type=vmbo,1,0,0,0,0,0,0,current
+8,current,66,5000,250,250,0.34693328095637027,1,school_type=havo AND ses=mid,1,0,0,0,0,0,0,current
+8,current,67,5000,250,250,0.6930316561112441,1,gender=m,1,0,0,0,0,0,0,current
+8,current,68,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,69,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,70,5000,250,250,0.14704159094468927,1,school_type=vwo AND ses=low,1,0,0,0,0,0,0,current
+8,current,71,5000,250,250,0.6898792993233125,2,ses=mid,2,0,0,0,0,0,0,current
+8,current,72,5000,250,250,0.4060511658114272,2,gender=f AND ses=low,2,0,0,0,0,0,0,current
+8,current,73,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,74,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,75,5000,250,250,0.405326377010485,2,gender=m AND ses=low,2,0,0,0,0,0,0,current
+8,current,76,5000,250,250,0.6023306622807629,3,ses=low,3,0,0,0,0,0,0,current
+8,current,77,5000,250,250,0.5812594319855474,2,school_type=vwo,2,0,0,0,0,0,0,current
+8,current,78,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,79,5000,250,250,0.5734748888912631,4,gender=f AND school_type=vmbo,4,0,0,0,0,0,0,current
+8,current,80,5000,250,250,0.6931336604990146,4,gender=f,4,0,0,0,0,0,0,current
+8,current,81,5000,250,250,1.1329429871453958,4,gender=f AND school_type=vmbo,4,0,0,0,0,0,0,current
+8,current,82,5000,250,250,0.33507421676608595,1,gender=m AND school_type=havo,1,0,0,0,0,0,0,current
+8,current,83,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,84,5000,250,250,0.2683897101446893,2,school_type=vmbo AND ses=high,2,0,0,0,0,0,0,current
+8,current,85,5000,250,250,0.21241304172384556,2,school_type=havo AND ses=low,2,0,0,0,0,0,0,current
+8,current,86,5000,250,250,0.566255698528611,1,ses=high,1,0,0,0,0,0,0,current
+8,current,87,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,88,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,89,5000,250,250,0.5961358866671687,2,ses=low,2,0,0,0,0,0,0,current
+8,current,90,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,91,5000,250,250,0.37364495907918444,2,gender=f AND ses=high,2,0,0,0,0,0,0,current
+8,current,92,5000,250,250,0.35806564576016947,2,school_type=vwo AND ses=mid,2,0,0,0,0,0,0,current
+8,current,93,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,94,5000,250,250,0.4251298626071148,3,gender=m AND ses=low,3,0,0,0,0,0,0,current
+8,current,95,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,96,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,97,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+8,current,98,5000,250,250,0.5363600927013547,2,school_type=vmbo AND ses=mid,2,0,0,0,0,0,0,current
+8,current,99,5000,250,250,0.0,0,,0,0,0,0,0,0,0,current
+12,current,0,10000,500,500,0.6926350931428009,2,school_type=vmbo,2,0,0,0,0,0,0,current
+12,current,1,10000,500,500,0.3789051448370954,1,gender=m AND ses=high,1,0,0,0,0,0,0,current
+12,current,2,10000,500,500,0.5243649481876823,2,school_type=havo,2,0,0,0,0,0,0,current
+12,current,3,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,4,10000,500,500,0.6886469056736306,3,ses=mid,3,0,0,0,0,0,0,current
+12,current,5,10000,500,500,0.5792396338431507,2,school_type=vwo,2,0,0,0,0,0,0,current
+12,current,6,10000,500,500,0.5703197931090949,5,gender=f AND school_type=vmbo,5,0,0,0,0,0,0,current
+12,current,7,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,8,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,9,10000,500,500,0.39596786306125775,5,gender=m AND school_type=vwo,5,0,0,0,0,0,0,current
+12,current,10,10000,500,500,0.3667257008963921,3,school_type=vwo AND ses=high,2,0,0,0,1,0,0,current
+12,current,11,10000,500,500,0.5243649481876823,1,school_type=havo,1,0,0,0,0,0,0,current
+12,current,12,10000,500,500,0.4221883543542249,1,gender=m AND ses=low,1,0,0,0,0,0,0,current
+12,current,13,10000,500,500,0.5652820041620802,1,ses=high,1,0,0,0,0,0,0,current
+12,current,14,10000,500,500,0.5792396338431507,1,school_type=vwo,1,0,0,0,0,0,0,current
+12,current,15,10000,500,500,0.5467773533626574,2,school_type=vmbo AND ses=mid,1,0,0,0,1,0,0,current
+12,current,16,10000,500,500,0.3454686878577319,1,ses=mid AND school_type=vwo,1,0,0,0,0,0,0,current
+12,current,17,10000,500,500,0.6029555624620645,2,ses=low,2,0,0,0,0,0,0,current
+12,current,18,10000,500,500,0.7822232439168512,2,gender=f AND school_type=vwo,2,0,0,0,0,0,0,current
+12,current,19,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,20,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,21,10000,500,500,0.5104914286666946,1,school_type=vmbo AND ses=low,1,0,0,0,0,0,0,current
+12,current,22,10000,500,500,0.35663890369630774,1,school_type=vwo AND ses=mid,1,0,0,0,0,0,0,current
+12,current,23,10000,500,500,0.21184311388721294,1,school_type=havo AND ses=low,1,0,0,0,0,0,0,current
+12,current,24,10000,500,500,0.6095025240263087,2,ses=low,2,0,0,0,0,0,0,current
+12,current,25,10000,500,500,0.6931432605548231,2,gender=m,2,0,0,0,0,0,0,current
+12,current,26,10000,500,500,0.3880939952757803,1,gender=f AND ses=high,1,0,0,0,0,0,0,current
+12,current,27,10000,500,500,0.375991065098411,2,gender=f AND ses=high,2,0,0,0,0,0,0,current
+12,current,28,10000,500,500,0.3502622018470521,2,gender=m AND school_type=havo,2,0,0,0,0,0,0,current
+12,current,29,10000,500,500,0.5314267446863924,1,gender=f AND ses=mid,1,0,0,0,0,0,0,current
+12,current,30,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,31,10000,500,500,0.36950717341107203,1,gender=m AND ses=high,1,0,0,0,0,0,0,current
+12,current,32,10000,500,500,0.5704257195778464,1,gender=f AND school_type=vmbo,1,0,0,0,0,0,0,current
+12,current,33,10000,500,500,0.3452590507117645,1,gender=m AND school_type=havo,1,0,0,0,0,0,0,current
+12,current,34,10000,500,500,0.5687246106665906,4,gender=f AND school_type=vmbo,4,0,0,0,0,0,0,current
+12,current,35,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,36,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,37,10000,500,500,0.3952245383806957,2,gender=f AND school_type=vwo,2,0,0,0,0,0,0,current
+12,current,38,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,39,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,40,10000,500,500,0.3829506002775769,3,gender=f AND ses=high,3,0,0,0,0,0,0,current
+12,current,41,10000,500,500,0.2693889020957896,2,ses=high AND school_type=vmbo,2,0,0,0,0,0,0,current
+12,current,42,10000,500,500,0.5293022305291069,2,gender=f AND ses=mid,2,0,0,0,0,0,0,current
+12,current,43,10000,500,500,0.36090477647750296,1,school_type=vwo AND ses=high,1,0,0,0,0,0,0,current
+12,current,44,10000,500,500,0.2653783859762714,1,ses=high AND school_type=vmbo,1,0,0,0,0,0,0,current
+12,current,45,10000,500,500,0.5792396338431507,3,school_type=vwo,3,0,0,0,0,0,0,current
+12,current,46,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,47,10000,500,500,0.6926350931428009,1,school_type=vmbo,1,0,0,0,0,0,0,current
+12,current,48,10000,500,500,0.37560096719017655,3,gender=m AND ses=high,3,0,0,0,0,0,0,current
+12,current,49,10000,500,500,0.6894273458771996,2,ses=mid,2,0,0,0,0,0,0,current
+12,current,50,10000,500,500,0.3950384928554418,1,gender=f AND school_type=vwo,1,0,0,0,0,0,0,current
+12,current,51,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,52,10000,500,500,0.3769647065675013,2,gender=f AND ses=high,2,0,0,0,0,0,0,current
+12,current,53,10000,500,500,0.38083650851351636,1,gender=m AND ses=high,1,0,0,0,0,0,0,current
+12,current,54,10000,500,500,0.5682972349117912,2,gender=f AND school_type=vmbo,1,0,0,0,1,0,0,current
+12,current,55,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,56,10000,500,500,0.5243649481876823,2,school_type=havo,2,0,0,0,0,0,0,current
+12,current,57,10000,500,500,0.3475594323456104,1,school_type=havo AND ses=mid,1,0,0,0,0,0,0,current
+12,current,58,10000,500,500,0.5021993335095741,4,ses=low AND school_type=vmbo,4,0,0,0,0,0,0,current
+12,current,59,10000,500,500,0.5480643845885242,3,school_type=vmbo AND ses=mid,3,0,0,0,0,0,0,current
+12,current,60,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,61,10000,500,500,0.41623700938124,2,gender=f AND ses=low,2,0,0,0,0,0,0,current
+12,current,62,10000,500,500,0.5327925538031804,3,gender=m AND ses=mid,3,0,0,0,0,0,0,current
+12,current,63,10000,500,500,0.427364062374339,2,gender=f AND ses=low,2,0,0,0,0,0,0,current
+12,current,64,10000,500,500,0.3827588586812991,1,gender=f AND ses=high,1,0,0,0,0,0,0,current
+12,current,65,10000,500,500,0.3370023177618081,1,gender=m AND school_type=havo,1,0,0,0,0,0,0,current
+12,current,66,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,67,10000,500,500,0.5355033590549776,2,school_type=vmbo AND ses=mid,2,0,0,0,0,0,0,current
+12,current,68,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,69,10000,500,500,0.3918625397048566,2,gender=f AND school_type=vwo,2,0,0,0,0,0,0,current
+12,current,70,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,71,10000,500,500,0.5688313232795487,2,gender=m AND school_type=vmbo,2,0,0,0,0,0,0,current
+12,current,72,10000,500,500,0.3926120690136241,2,gender=f AND school_type=vwo,2,0,0,0,0,0,0,current
+12,current,73,10000,500,500,0.5616750167328898,1,ses=high,1,0,0,0,0,0,0,current
+12,current,74,10000,500,500,0.5243649481876823,1,school_type=havo,1,0,0,0,0,0,0,current
+12,current,75,10000,500,500,0.39298631410707635,1,gender=f AND school_type=vwo,1,0,0,0,0,0,0,current
+12,current,76,10000,500,500,1.1494476456654388,2,gender=f AND school_type=vmbo,1,0,0,0,1,0,0,current
+12,current,77,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,78,10000,500,500,0.3452590507117645,2,gender=m AND school_type=havo,1,0,0,0,1,0,0,current
+12,current,79,10000,500,500,0.3667257008963921,3,gender=f AND ses=high,3,0,0,0,0,0,0,current
+12,current,80,10000,500,500,0.5745161854647627,4,gender=m AND school_type=vmbo,4,0,0,0,0,0,0,current
+12,current,81,10000,500,500,0.5738920298783764,1,gender=f AND school_type=vmbo,1,0,0,0,0,0,0,current
+12,current,82,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,83,10000,500,500,0.5243649481876823,1,school_type=havo,0,0,0,0,1,0,0,current
+12,current,84,10000,500,500,0.4278777886388043,2,gender=m AND ses=low,2,0,0,0,0,0,0,current
+12,current,85,10000,500,500,0.3746241146933307,2,gender=f AND ses=high,2,0,0,0,0,0,0,current
+12,current,86,10000,500,500,0.6926350931428009,2,school_type=vmbo,2,0,0,0,0,0,0,current
+12,current,87,10000,500,500,0.5725332828952293,2,gender=f AND school_type=vmbo,1,0,0,0,1,0,0,current
+12,current,88,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,89,10000,500,500,0.5454836171165771,3,ses=mid AND school_type=vmbo,3,0,0,0,0,0,0,current
+12,current,90,10000,500,500,0.14535819691065985,1,school_type=vwo AND ses=low,1,0,0,0,0,0,0,current
+12,current,91,10000,500,500,0.3806437787539232,2,gender=f AND ses=high,2,0,0,0,0,0,0,current
+12,current,92,10000,500,500,0.5243649481876823,1,school_type=havo,0,0,0,0,1,0,0,current
+12,current,93,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,94,10000,500,500,0.5679761511496949,2,gender=f AND school_type=vmbo,1,0,0,0,1,0,0,current
+12,current,95,10000,500,500,0.5692576488321666,3,gender=f AND school_type=vmbo,3,0,0,0,0,0,0,current
+12,current,96,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,97,10000,500,500,0.0,0,,0,0,0,0,0,0,0,current
+12,current,98,10000,500,500,0.34504931092972085,1,school_type=havo AND ses=mid,1,0,0,0,0,0,0,current
+12,current,99,10000,500,500,0.5243649481876823,1,school_type=havo,1,0,0,0,0,0,0,current

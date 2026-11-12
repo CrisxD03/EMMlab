@@ -1,0 +1,193 @@
+quality,schools,delta,list,twist,path,reps,recovery_rate,recovery_se,hit_rate,recovered_above_null_threshold,mean_recovered_rank,mean_found_diff,true_diff,false_finding_share,level_shift_leaks_per_run,proxies_per_run,chance_findings_per_run,scale_artifacts_per_run
+cook,50,0.05,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.1,0.03,0.33,0,7.1,0.1052,0.05404,0.945,0.51,4.76,4.05,0
+cook,50,0.05,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.08,0.02713,0.22,0,6.625,0.1131,0.05,0.945,0.51,4.76,4.05,0
+cook,50,0.05,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.11,0.03129,0.35,0,7.727,0.1083,0.05404,0.945,0.49,4.85,3.98,0
+cook,50,0.05,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.07,0.02551,0.2,0,6.714,0.1123,0.05,0.945,0.49,4.85,3.98,0
+cook,50,0.05,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.1,0.03,0.34,0,7.2,0.1053,0.05404,0.946,0.49,4.87,3.96,0
+cook,50,0.05,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.07,0.02551,0.2,0,6.429,0.1123,0.05,0.946,0.49,4.87,3.96,0
+cook,50,0.1,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.24,0.04271,0.45,0,6.5,0.146,0.104,0.922,1.52,4.71,2.93,0
+cook,50,0.1,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.19,0.03923,0.33,0,6.474,0.1508,0.1,0.922,1.52,4.71,2.93,0
+cook,50,0.1,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.28,0.0449,0.52,0,7.107,0.1468,0.104,0.92,1.45,4.79,2.9,0
+cook,50,0.1,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.17,0.03756,0.28,0,6.765,0.1579,0.1,0.92,1.45,4.79,2.9,0
+cook,50,0.1,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.26,0.04386,0.49,0,6.885,0.1459,0.104,0.921,1.49,4.75,2.91,0
+cook,50,0.1,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.18,0.03842,0.3,0,6.944,0.1568,0.1,0.921,1.49,4.75,2.91,0
+cook,50,0.2,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.67,0.04702,0.73,0,5.403,0.2303,0.204,0.853,1.65,4.54,2.34,0
+cook,50,0.2,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.68,0.04665,0.74,0,6.265,0.2088,0.2,0.853,1.65,4.54,2.34,0
+cook,50,0.2,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.67,0.04702,0.74,0,5.418,0.2291,0.204,0.856,1.62,4.73,2.21,0
+cook,50,0.2,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.65,0.0477,0.7,0,6.415,0.2108,0.2,0.856,1.62,4.73,2.21,0
+cook,50,0.2,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.68,0.04665,0.75,0,5.412,0.2286,0.204,0.852,1.68,4.55,2.29,0
+cook,50,0.2,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.67,0.04702,0.73,0,6.478,0.2087,0.2,0.852,1.68,4.55,2.29,0
+cook,50,0.4,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.01,3.9,0.3718,0.404,0.801,1.85,4.65,1.51,0
+cook,50,0.4,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.99,0.00995,0.99,0.04,3.879,0.3381,0.4,0.801,1.85,4.65,1.51,0
+cook,50,0.4,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.01,4.13,0.3718,0.404,0.801,1.45,5.37,1.19,0
+cook,50,0.4,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.99,0.00995,0.99,0.04,4.192,0.3381,0.4,0.801,1.45,5.37,1.19,0
+cook,50,0.4,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.01,3.82,0.3718,0.404,0.801,1.83,4.73,1.45,0
+cook,50,0.4,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.99,0.00995,0.99,0.04,4,0.3381,0.4,0.801,1.83,4.73,1.45,0
+cook,100,0.05,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.09,0.02862,0.26,0,5.889,0.08973,0.05404,0.962,0.66,3.71,5.2,0
+cook,100,0.05,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.06,0.02375,0.12,0,9,0.08495,0.05,0.962,0.66,3.71,5.2,0
+cook,100,0.05,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.1,0.03,0.27,0,6.3,0.09127,0.05404,0.963,0.65,3.68,5.26,0
+cook,100,0.05,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.04,0.0196,0.1,0,9.5,0.07841,0.05,0.963,0.65,3.68,5.26,0
+cook,100,0.05,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.1,0.03,0.28,0,6.3,0.09146,0.05404,0.961,0.65,3.72,5.2,0
+cook,100,0.05,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.05,0.02179,0.11,0,9.4,0.08166,0.05,0.961,0.65,3.72,5.2,0
+cook,100,0.1,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.37,0.04828,0.47,0,6.541,0.1374,0.104,0.924,1.48,3.78,3.98,0
+cook,100,0.1,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.2,0.04,0.29,0,8.2,0.1214,0.1,0.924,1.48,3.78,3.98,0
+cook,100,0.1,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.4,0.04899,0.5,0,6.75,0.138,0.104,0.926,1.46,3.68,4.12,0
+cook,100,0.1,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.16,0.03666,0.24,0,8.312,0.1231,0.1,0.926,1.46,3.68,4.12,0
+cook,100,0.1,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.4,0.04899,0.51,0,6.725,0.1357,0.104,0.924,1.43,3.76,4.05,0
+cook,100,0.1,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.17,0.03756,0.25,0,8.294,0.1242,0.1,0.924,1.43,3.76,4.05,0
+cook,100,0.2,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.9,0.03,0.9,0,5.844,0.2096,0.204,0.826,2.16,3.7,2.4,0
+cook,100,0.2,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.84,0.03666,0.84,0,6.357,0.1885,0.2,0.826,2.16,3.7,2.4,0
+cook,100,0.2,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.88,0.0325,0.88,0,5.67,0.2106,0.204,0.833,1.96,4.14,2.23,0
+cook,100,0.2,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.79,0.04073,0.79,0,6.759,0.1917,0.2,0.833,1.96,4.14,2.23,0
+cook,100,0.2,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.93,0.02551,0.93,0,5.645,0.2077,0.204,0.826,2.09,3.77,2.4,0
+cook,100,0.2,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.81,0.03923,0.81,0,6.667,0.1906,0.2,0.826,2.09,3.77,2.4,0
+cook,100,0.4,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.09,4.18,0.3659,0.404,0.8,2.56,4.45,0.98,0
+cook,100,0.4,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.2,4.22,0.3327,0.4,0.8,2.56,4.45,0.98,0
+cook,100,0.4,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.09,4.38,0.3659,0.404,0.8,2.22,5.11,0.66,0
+cook,100,0.4,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.2,4.76,0.3327,0.4,0.8,2.22,5.11,0.66,0
+cook,100,0.4,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.09,3.93,0.3659,0.404,0.8,2.53,4.5,0.96,0
+cook,100,0.4,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.2,4.45,0.3327,0.4,0.8,2.53,4.5,0.96,0
+cook,250,0.05,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.26,0.04386,0.35,0,7.423,0.08279,0.05404,0.949,0.44,3.53,5.51,0
+cook,250,0.05,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.12,0.0325,0.16,0,8.667,0.08318,0.05,0.949,0.44,3.53,5.51,0
+cook,250,0.05,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.26,0.04386,0.36,0,7.346,0.08131,0.05404,0.954,0.44,3.62,5.47,0
+cook,250,0.05,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.08,0.02713,0.1,0,8.5,0.08612,0.05,0.954,0.44,3.62,5.47,0
+cook,250,0.05,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.27,0.0444,0.37,0,7.444,0.082,0.05404,0.953,0.42,3.64,5.46,0
+cook,250,0.05,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.08,0.02713,0.1,0,8.5,0.08612,0.05,0.953,0.42,3.64,5.46,0
+cook,250,0.1,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.72,0.0449,0.73,0,6.417,0.1236,0.104,0.868,1.32,3.7,3.66,0
+cook,250,0.1,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.57,0.04951,0.59,0,7.561,0.1103,0.1,0.868,1.32,3.7,3.66,0
+cook,250,0.1,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.71,0.04538,0.72,0,6.155,0.1236,0.104,0.875,1.3,3.86,3.59,0
+cook,250,0.1,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.52,0.04996,0.53,0,8.019,0.1128,0.1,0.875,1.3,3.86,3.59,0
+cook,250,0.1,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.73,0.0444,0.74,0,6.205,0.123,0.104,0.869,1.38,3.66,3.65,0
+cook,250,0.1,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.55,0.04975,0.57,0,7.964,0.1108,0.1,0.869,1.38,3.66,3.65,0
+cook,250,0.2,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0,4.68,0.2048,0.204,0.802,2.36,4.12,1.54,0
+cook,250,0.2,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.98,0.014,0.98,0,5.235,0.1829,0.2,0.802,2.36,4.12,1.54,0
+cook,250,0.2,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.99,0.00995,0.99,0,4.798,0.2054,0.204,0.805,2.08,4.65,1.32,0
+cook,250,0.2,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.96,0.0196,0.96,0,5.792,0.1846,0.2,0.805,2.08,4.65,1.32,0
+cook,250,0.2,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0,4.45,0.2048,0.204,0.804,2.39,4.11,1.54,0
+cook,250,0.2,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.96,0.0196,0.96,0,5.542,0.1846,0.2,0.804,2.39,4.11,1.54,0
+cook,250,0.4,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.76,4.23,0.3683,0.404,0.8,2.44,5.16,0.4,0
+cook,250,0.4,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.93,4.03,0.333,0.4,0.8,2.44,5.16,0.4,0
+cook,250,0.4,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.76,4.42,0.3683,0.404,0.8,2.11,5.58,0.31,0
+cook,250,0.4,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.93,4.81,0.333,0.4,0.8,2.11,5.58,0.31,0
+cook,250,0.4,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.76,3.93,0.3683,0.404,0.8,2.38,5.24,0.38,0
+cook,250,0.4,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.93,4.3,0.333,0.4,0.8,2.38,5.24,0.38,0
+cook,500,0.05,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.49,0.04999,0.54,0,6.694,0.07218,0.05404,0.921,0.56,3.59,5.06,0
+cook,500,0.05,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.2,0.04,0.25,0,7.95,0.06068,0.05,0.921,0.56,3.59,5.06,0
+cook,500,0.05,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.51,0.04999,0.56,0,6.588,0.07144,0.05404,0.926,0.57,3.61,5.08,0
+cook,500,0.05,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.14,0.0347,0.18,0,8.143,0.06116,0.05,0.926,0.57,3.61,5.08,0
+cook,500,0.05,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.51,0.04999,0.56,0,6.588,0.07144,0.05404,0.923,0.56,3.56,5.11,0
+cook,500,0.05,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.17,0.03756,0.21,0,8.235,0.06196,0.05,0.923,0.56,3.56,5.11,0
+cook,500,0.1,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.9,0.03,0.9,0,5.533,0.1115,0.104,0.82,1.71,3.77,2.72,0
+cook,500,0.1,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.9,0.03,0.9,0,6.844,0.09478,0.1,0.82,1.71,3.77,2.72,0
+cook,500,0.1,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.89,0.03129,0.89,0,5.461,0.1121,0.104,0.829,1.65,3.97,2.67,0
+cook,500,0.1,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.82,0.03842,0.82,0,7.11,0.09611,0.1,0.829,1.65,3.97,2.67,0
+cook,500,0.1,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.91,0.02862,0.92,0,5.396,0.1104,0.104,0.824,1.71,3.76,2.77,0
+cook,500,0.1,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.84,0.03666,0.84,0,6.929,0.09603,0.1,0.824,1.71,3.76,2.77,0
+cook,500,0.2,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.13,4.1,0.2014,0.204,0.8,2.27,4.75,0.98,0
+cook,500,0.2,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.12,4.29,0.1796,0.2,0.8,2.27,4.75,0.98,0
+cook,500,0.2,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.13,4.21,0.2014,0.204,0.8,2.05,5.32,0.63,0
+cook,500,0.2,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.12,4.7,0.1796,0.2,0.8,2.05,5.32,0.63,0
+cook,500,0.2,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.13,3.87,0.2014,0.204,0.8,2.25,4.76,0.99,0
+cook,500,0.2,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.12,4.54,0.1796,0.2,0.8,2.25,4.76,0.99,0
+cook,500,0.4,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,1,4.05,0.3662,0.404,0.8,2.36,5.58,0.06,0
+cook,500,0.4,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,3.69,0.3309,0.4,0.8,2.36,5.58,0.06,0
+cook,500,0.4,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,1,4.26,0.3662,0.404,0.8,1.83,6.11,0.06,0
+cook,500,0.4,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,4.59,0.3309,0.4,0.8,1.83,6.11,0.06,0
+cook,500,0.4,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,1,3.79,0.3662,0.404,0.8,2.34,5.59,0.07,0
+cook,500,0.4,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,3.89,0.3309,0.4,0.8,2.34,5.59,0.07,0
+ent_z,50,0.05,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.02,0.014,0.08,0,2.5,0.1147,0.05404,0.8904,0.25,4.02,2.45,0
+ent_z,50,0.05,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.13,0.03363,0.78,0,2.692,0.08079,0.05,0.8904,0.25,4.02,2.45,0
+ent_z,50,0.05,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.13,0.03363,0.39,0,5.385,0.1166,0.05404,0.904,0.34,5.49,2.93,0
+ent_z,50,0.05,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.13,0.03363,0.57,0,2.846,0.09093,0.05,0.904,0.34,5.49,2.93,0
+ent_z,50,0.05,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.02,0.014,0.08,0,2,0.1147,0.05404,0.8904,0.25,4.01,2.46,0
+ent_z,50,0.05,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.13,0.03363,0.78,0,2.615,0.08079,0.05,0.8904,0.25,4.01,2.46,0
+ent_z,50,0.1,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.07,0.02551,0.13,0,2.714,0.1498,0.104,0.8663,0.75,3.96,2.01,0
+ent_z,50,0.1,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.3,0.04583,0.92,0.02,2.567,0.1116,0.1,0.8663,0.75,3.96,2.01,0
+ent_z,50,0.1,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.32,0.04665,0.62,0,4.188,0.1471,0.104,0.86,0.97,5.49,2.05,0
+ent_z,50,0.1,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.3,0.04583,0.78,0.02,2.667,0.1208,0.1,0.86,0.97,5.49,2.05,0
+ent_z,50,0.1,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.07,0.02551,0.13,0,3.143,0.1498,0.104,0.8663,0.75,3.96,2.01,0
+ent_z,50,0.1,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.3,0.04583,0.92,0.02,2.4,0.1116,0.1,0.8663,0.75,3.96,2.01,0
+ent_z,50,0.2,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.26,0.04386,0.27,0.06,1.808,0.2519,0.204,0.8384,0.79,3.73,1.95,0
+ent_z,50,0.2,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.81,0.03923,0.99,0.22,2.321,0.1887,0.2,0.8384,0.79,3.73,1.95,0
+ent_z,50,0.2,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.8,0.04,0.91,0.13,3.675,0.218,0.204,0.811,0.95,5.85,1.31,0
+ent_z,50,0.2,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.81,0.03923,0.98,0.22,2.531,0.1901,0.2,0.811,0.95,5.85,1.31,0
+ent_z,50,0.2,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.26,0.04386,0.27,0.06,1.769,0.2519,0.204,0.8384,0.79,3.72,1.96,0
+ent_z,50,0.2,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.81,0.03923,0.99,0.22,2.247,0.1887,0.2,0.8384,0.79,3.72,1.96,0
+ent_z,50,0.4,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.63,0.04828,0.63,0.61,1.698,0.3779,0.404,0.7961,0.76,3.6,1.91,0
+ent_z,50,0.4,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.99,0.00995,1,0.94,1.667,0.336,0.4,0.7961,0.76,3.6,1.91,0
+ent_z,50,0.4,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.93,2.34,0.3718,0.404,0.8,0.7,6.75,0.55,0
+ent_z,50,0.4,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.99,0.00995,1,0.94,1.667,0.336,0.4,0.8,0.7,6.75,0.55,0
+ent_z,50,0.4,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.63,0.04828,0.63,0.61,1.698,0.3779,0.404,0.7961,0.76,3.6,1.91,0
+ent_z,50,0.4,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.99,0.00995,1,0.94,1.576,0.336,0.4,0.7961,0.76,3.6,1.91,0
+ent_z,100,0.05,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.09,0.02862,0.14,0,1.889,0.1129,0.05404,0.8715,0.28,4,2.39,0
+ent_z,100,0.05,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.12,0.0325,0.87,0.01,1.917,0.05477,0.05,0.8715,0.28,4,2.39,0
+ent_z,100,0.05,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.18,0.03842,0.5,0,3.778,0.08372,0.05404,0.883,0.33,5.42,2.84,0
+ent_z,100,0.05,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.12,0.0325,0.67,0.01,1.75,0.06093,0.05,0.883,0.33,5.42,2.84,0
+ent_z,100,0.05,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.09,0.02862,0.14,0,1.889,0.1129,0.05404,0.8715,0.28,4,2.39,0
+ent_z,100,0.05,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.12,0.0325,0.87,0.01,1.75,0.05477,0.05,0.8715,0.28,4,2.39,0
+ent_z,100,0.1,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.24,0.04271,0.26,0.02,2.167,0.1548,0.104,0.8398,0.69,3.85,1.94,0
+ent_z,100,0.1,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.47,0.04991,0.99,0.05,2.596,0.09217,0.1,0.8398,0.69,3.85,1.94,0
+ent_z,100,0.1,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.5,0.05,0.73,0.03,3.68,0.1249,0.104,0.839,0.92,5.53,1.93,0
+ent_z,100,0.1,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.47,0.04991,0.88,0.05,2.66,0.09747,0.1,0.839,0.92,5.53,1.93,0
+ent_z,100,0.1,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.24,0.04271,0.26,0.02,2.083,0.1548,0.104,0.8398,0.69,3.85,1.94,0
+ent_z,100,0.1,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.47,0.04991,0.99,0.05,2.426,0.09217,0.1,0.8398,0.69,3.85,1.94,0
+ent_z,100,0.2,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.5,0.05,0.5,0.31,1.9,0.2196,0.204,0.8079,0.83,3.69,1.7,0
+ent_z,100,0.2,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.99,0.00995,1,0.57,2.01,0.1795,0.2,0.8079,0.83,3.69,1.7,0
+ent_z,100,0.2,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.97,0.01706,0.98,0.45,2.845,0.2032,0.204,0.802,0.79,6.33,0.9,0
+ent_z,100,0.2,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.99,0.00995,1,0.57,2.02,0.1795,0.2,0.802,0.79,6.33,0.9,0
+ent_z,100,0.2,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.5,0.05,0.5,0.31,1.9,0.2196,0.204,0.8079,0.83,3.69,1.7,0
+ent_z,100,0.2,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.99,0.00995,1,0.57,1.889,0.1795,0.2,0.8079,0.83,3.69,1.7,0
+ent_z,100,0.4,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.84,0.03666,0.84,0.84,1.798,0.3684,0.404,0.7683,0.9,3.62,1.52,0
+ent_z,100,0.4,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.39,0.3327,0.4,0.7683,0.9,3.62,1.52,0
+ent_z,100,0.4,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,1,2.04,0.3659,0.404,0.8,0.61,7.32,0.07,0
+ent_z,100,0.4,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.34,0.3327,0.4,0.8,0.61,7.32,0.07,0
+ent_z,100,0.4,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.84,0.03666,0.84,0.84,1.798,0.3684,0.404,0.7683,0.9,3.62,1.52,0
+ent_z,100,0.4,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.34,0.3327,0.4,0.7683,0.9,3.62,1.52,0
+ent_z,250,0.05,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.18,0.03842,0.24,0,1.833,0.08085,0.05404,0.8493,0.26,3.91,2.33,0
+ent_z,250,0.05,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.35,0.0477,0.94,0.02,2.371,0.05275,0.05,0.8493,0.26,3.91,2.33,0
+ent_z,250,0.05,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.45,0.04975,0.71,0,4.178,0.0744,0.05404,0.847,0.19,5.54,2.51,0
+ent_z,250,0.05,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.35,0.0477,0.82,0.02,2.771,0.05587,0.05,0.847,0.19,5.54,2.51,0
+ent_z,250,0.05,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.18,0.03842,0.24,0,1.833,0.08085,0.05404,0.8493,0.26,3.91,2.33,0
+ent_z,250,0.05,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.35,0.0477,0.94,0.02,2.371,0.05275,0.05,0.8493,0.26,3.91,2.33,0
+ent_z,250,0.1,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.45,0.04975,0.45,0.17,1.733,0.1241,0.104,0.8164,0.74,3.69,1.9,0
+ent_z,250,0.1,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.92,0.02713,1,0.34,2.217,0.09416,0.1,0.8164,0.74,3.69,1.9,0
+ent_z,250,0.1,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.89,0.03129,0.96,0.27,2.966,0.1135,0.104,0.806,0.78,5.95,1.33,0
+ent_z,250,0.1,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.92,0.02713,0.98,0.34,2.293,0.09586,0.1,0.806,0.78,5.95,1.33,0
+ent_z,250,0.1,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.45,0.04975,0.45,0.17,1.733,0.1241,0.104,0.8164,0.74,3.69,1.9,0
+ent_z,250,0.1,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.92,0.02713,1,0.34,2.065,0.09416,0.1,0.8164,0.74,3.69,1.9,0
+ent_z,250,0.2,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.72,0.0449,0.72,0.72,1.778,0.2093,0.204,0.782,1,3.6,1.48,0
+ent_z,250,0.2,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.98,1.58,0.1816,0.2,0.782,1,3.6,1.48,0
+ent_z,250,0.2,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,0.97,2.16,0.2048,0.204,0.8,0.64,7.11,0.25,0
+ent_z,250,0.2,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.98,1.57,0.1816,0.2,0.8,0.64,7.11,0.25,0
+ent_z,250,0.2,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.72,0.0449,0.72,0.72,1.778,0.2093,0.204,0.782,1,3.6,1.48,0
+ent_z,250,0.2,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.98,1.52,0.1816,0.2,0.782,1,3.6,1.48,0
+ent_z,250,0.4,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.92,0.02713,0.92,0.92,1.859,0.3693,0.404,0.7586,1.28,3.58,1.14,0
+ent_z,250,0.4,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.21,0.333,0.4,0.7586,1.28,3.58,1.14,0
+ent_z,250,0.4,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,1,1.96,0.3683,0.404,0.8,0.31,7.69,0,0
+ent_z,250,0.4,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.2,0.333,0.4,0.8,0.31,7.69,0,0
+ent_z,250,0.4,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.92,0.02713,0.92,0.92,1.859,0.3693,0.404,0.7586,1.28,3.58,1.14,0
+ent_z,250,0.4,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.2,0.333,0.4,0.7586,1.28,3.58,1.14,0
+ent_z,500,0.05,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.22,0.04142,0.22,0.03,1.773,0.07859,0.05404,0.8466,0.24,3.8,2.56,0
+ent_z,500,0.05,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,0.58,0.04936,1,0.03,2.897,0.04609,0.05,0.8466,0.24,3.8,2.56,0
+ent_z,500,0.05,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.68,0.04665,0.75,0.03,3.691,0.06788,0.05404,0.836,0.29,5.2,2.59,0
+ent_z,500,0.05,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,0.58,0.04936,0.89,0.03,3.017,0.0489,0.05,0.836,0.29,5.2,2.59,0
+ent_z,500,0.05,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.22,0.04142,0.22,0.03,1.818,0.07859,0.05404,0.8466,0.24,3.8,2.56,0
+ent_z,500,0.05,reported,"B: motivation -> extra, high income",motivation -> extra,100,0.58,0.04936,1,0.03,2.741,0.04609,0.05,0.8466,0.24,3.8,2.56,0
+ent_z,500,0.1,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.52,0.04996,0.52,0.4,1.75,0.1145,0.104,0.8105,0.88,3.62,1.88,0
+ent_z,500,0.1,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.86,2.03,0.09226,0.1,0.8105,0.88,3.62,1.88,0
+ent_z,500,0.1,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.98,0.014,0.99,0.65,2.582,0.1078,0.104,0.801,0.92,6.16,0.93,0
+ent_z,500,0.1,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.86,2.01,0.09226,0.1,0.801,0.92,6.16,0.93,0
+ent_z,500,0.1,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.52,0.04996,0.52,0.4,1.731,0.1145,0.104,0.8105,0.88,3.62,1.88,0
+ent_z,500,0.1,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,0.86,1.91,0.09226,0.1,0.8105,0.88,3.62,1.88,0
+ent_z,500,0.2,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.86,0.0347,0.86,0.86,1.779,0.2023,0.204,0.766,1.18,3.5,1.36,0
+ent_z,500,0.2,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.38,0.1796,0.2,0.766,1.18,3.5,1.36,0
+ent_z,500,0.2,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,1,1.99,0.2014,0.204,0.8,0.72,7.26,0.02,0
+ent_z,500,0.2,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.33,0.1796,0.2,0.8,0.72,7.26,0.02,0
+ent_z,500,0.2,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.86,0.0347,0.86,0.86,1.779,0.2023,0.204,0.766,1.18,3.5,1.36,0
+ent_z,500,0.2,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.32,0.1796,0.2,0.766,1.18,3.5,1.36,0
+ent_z,500,0.4,no_cover,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.99,0.00995,0.99,0.99,1.909,0.3663,0.404,0.7511,1.49,3.5,1.01,0
+ent_z,500,0.4,no_cover,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.1,0.3309,0.4,0.7511,1.49,3.5,1.01,0
+ent_z,500,0.4,no_prune,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,1,0,1,1,1.92,0.3662,0.404,0.8,0.28,7.72,0,0
+ent_z,500,0.4,no_prune,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.09,0.3309,0.4,0.8,0.28,7.72,0,0
+ent_z,500,0.4,reported,"A: feedback -> grade, vmbo AND low income",feedback -> grade,100,0.99,0.00995,0.99,0.99,1.909,0.3663,0.404,0.7511,1.49,3.5,1.01,0
+ent_z,500,0.4,reported,"B: motivation -> extra, high income",motivation -> extra,100,1,0,1,1,1.09,0.3309,0.4,0.7511,1.49,3.5,1.01,0

@@ -1,0 +1,22 @@
+# Experiment 1 (other quality measures): does the quality measure change what gets recovered?
+#
+# Same World, grid, seeds and grading as exp1a_current; everything is the `current` preset except the quality
+# measure: ent_z (group size x largest path z) and cook (how far the whole coefficient vector moves, the standard
+# EMM measure for regression models). `current` itself is exp1a_current. Each measure gets its own null runs,
+# because the chance threshold differs per measure.
+#
+# Run: uv run python experiments/run_experiments.py exp1b_measures
+name: exp1b_measures
+aim: Recovery of the same twists with the ent_z and cook quality measures (everything else as current)
+world: dutch_two_twists.yaml
+preset: current
+tau: 0.8
+n_sim: 100
+factors:
+  - path: method.emm.quality
+    levels: [ent_z, cook]
+  - path: world.schools.n_schools
+    levels: [50, 100, 250, 500]
+  - path: world.twists.0.delta
+    linked: [world.twists.1.delta]
+    levels: [0.05, 0.1, 0.2, 0.4]

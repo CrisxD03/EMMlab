@@ -1,0 +1,496 @@
+{
+ "aim": "Recovery of the two twists when the Researcher's Model misses, or adds, an arrow",
+ "base": {
+  "grading": {
+   "epsilon": 0.02,
+   "oracle_students": 400000,
+   "proxy_min_jaccard": 0.3,
+   "tau": 0.8
+  },
+  "holdout": false,
+  "method": {
+   "analysis": {
+    "brr_fay_k": 0.5,
+    "normalisation": "none",
+    "pv_mode": "rubin",
+    "residualize_method": "simple",
+    "residualize_on": [],
+    "se": "cluster",
+    "standardize": "per_group",
+    "weights": "none"
+   },
+   "emm": {
+    "algorithm": "beam",
+    "baseline": "complement",
+    "beam_width": 20,
+    "cover_selection": true,
+    "exact_bootstrap_reps": 99,
+    "interval_level": 0.95,
+    "interval_se": "naive",
+    "nominal_min_schools": 25,
+    "paths": "all",
+    "prune_refinements": true,
+    "quality": "current",
+    "top_k": 10
+   },
+   "name": "current"
+  },
+  "model": {
+   "arrows": [
+    "feedback -> motivation",
+    "sport -> extra",
+    "motivation -> extra",
+    "motivation -> grade",
+    "feedback -> grade",
+    "extra -> grade"
+   ],
+   "latents": [
+    "feedback",
+    "sport",
+    "motivation",
+    "extra",
+    "grade"
+   ],
+   "name": "dutch_two_twists_model"
+  },
+  "permutation_reps": 0,
+  "search": {
+   "attributes": [
+    "school_type",
+    "ses",
+    "gender"
+   ],
+   "binning": {},
+   "default_binning": {
+    "n_bins": 5,
+    "one_sided": true,
+    "weighting": "students"
+   },
+   "depth": 2,
+   "min_n": 100,
+   "min_n_complement": 100,
+   "min_schools": 0
+  },
+  "seed": 0,
+  "world": {
+   "arrows": [
+    {
+     "from": "feedback",
+     "slope": 0.25,
+     "to": "motivation"
+    },
+    {
+     "from": "sport",
+     "slope": 0.3,
+     "to": "extra"
+    },
+    {
+     "from": "motivation",
+     "slope": 0.2,
+     "to": "extra"
+    },
+    {
+     "from": "motivation",
+     "slope": 0.25,
+     "to": "grade"
+    },
+    {
+     "from": "feedback",
+     "slope": 0.1,
+     "to": "grade"
+    },
+    {
+     "from": "extra",
+     "slope": 0.1,
+     "to": "grade"
+    }
+   ],
+   "attributes": {
+    "gender": {
+     "level": "student",
+     "ordinal": false,
+     "role": "normal",
+     "values": {
+      "f": 0.5,
+      "m": 0.5
+     }
+    },
+    "school_type": {
+     "level": "school",
+     "ordinal": false,
+     "role": "normal",
+     "values": {
+      "havo": 0.218,
+      "vmbo": 0.515,
+      "vwo": 0.267
+     }
+    },
+    "ses": {
+     "depends_on": "school_type",
+     "label": "family income",
+     "level": "student",
+     "ordinal": true,
+     "role": "normal",
+     "table": {
+      "havo": {
+       "high": 0.25,
+       "low": 0.25,
+       "mid": 0.5
+      },
+      "vmbo": {
+       "high": 0.15,
+       "low": 0.4,
+       "mid": 0.45
+      },
+      "vwo": {
+       "high": 0.45,
+       "low": 0.12,
+       "mid": 0.43
+      }
+     },
+     "values": {
+      "high": 0.25,
+      "low": 0.29,
+      "mid": 0.46
+     }
+    }
+   },
+   "description": "dutch_tracks with two planted twists (A: feedback -> grade for vmbo AND low income; B: motivation -> extra for high income).",
+   "generation": "naive",
+   "layout_direction": "RIGHT",
+   "name": "dutch_two_twists",
+   "nodes": {
+    "extra": {
+     "kind": "latent",
+     "label": "extracurricular activities",
+     "level": "student",
+     "observed": true,
+     "recipe": {
+      "intercept": 0.0
+     },
+     "reliability_when": [],
+     "role": "normal",
+     "school_sd": 0.0,
+     "target": {
+      "sd": 1.0
+     }
+    },
+    "feedback": {
+     "kind": "latent",
+     "label": "feedback from teachers",
+     "level": "student",
+     "observed": true,
+     "recipe": {
+      "intercept": 0.0
+     },
+     "reliability_when": [],
+     "role": "normal",
+     "school_sd": 0.0,
+     "target": {
+      "sd": 1.0
+     }
+    },
+    "grade": {
+     "kind": "latent",
+     "label": "standardized exam grade",
+     "level": "student",
+     "observed": true,
+     "recipe": {
+      "intercept": 0.0
+     },
+     "reliability_when": [],
+     "role": "normal",
+     "school_sd": 0.0,
+     "target": {
+      "sd": 1.0
+     }
+    },
+    "motivation": {
+     "kind": "latent",
+     "label": "motivation to study",
+     "level": "student",
+     "observed": true,
+     "recipe": {
+      "intercept": 0.0
+     },
+     "reliability_when": [],
+     "role": "normal",
+     "school_sd": 0.0,
+     "target": {
+      "sd": 1.0
+     }
+    },
+    "sport": {
+     "kind": "latent",
+     "label": "sport enjoyment",
+     "level": "student",
+     "observed": true,
+     "recipe": {
+      "intercept": 0.0
+     },
+     "reliability_when": [],
+     "role": "normal",
+     "school_sd": 0.0,
+     "target": {
+      "sd": 1.0
+     }
+    }
+   },
+   "schools": {
+    "allocation": "stratified",
+    "n_schools": 100,
+    "students_per_school": {
+     "dist": "fixed",
+     "max": 60,
+     "min": 2,
+     "n": 20
+    }
+   },
+   "shifts": [
+    {
+     "delta": 0.1,
+     "target": "feedback",
+     "when": {
+      "gender": "f"
+     }
+    },
+    {
+     "delta": -0.3,
+     "target": "sport",
+     "when": {
+      "gender": "f"
+     }
+    },
+    {
+     "delta": 0.1,
+     "target": "motivation",
+     "when": {
+      "gender": "f"
+     }
+    },
+    {
+     "delta": 0.05,
+     "target": "motivation",
+     "when": {
+      "school_type": "havo"
+     }
+    },
+    {
+     "delta": 0.15,
+     "target": "motivation",
+     "when": {
+      "school_type": "vwo"
+     }
+    },
+    {
+     "delta": 0.15,
+     "target": "extra",
+     "when": {
+      "ses": "high"
+     }
+    },
+    {
+     "delta": 0.15,
+     "target": "grade",
+     "when": {
+      "gender": "f"
+     }
+    },
+    {
+     "delta": 0.3,
+     "target": "grade",
+     "when": {
+      "school_type": "havo"
+     }
+    },
+    {
+     "delta": 0.55,
+     "target": "grade",
+     "when": {
+      "school_type": "vwo"
+     }
+    },
+    {
+     "delta": 0.1,
+     "target": "grade",
+     "when": {
+      "ses": "mid"
+     }
+    },
+    {
+     "delta": 0.2,
+     "target": "grade",
+     "when": {
+      "ses": "high"
+     }
+    }
+   ],
+   "twists": [
+    {
+     "arrow": "feedback -> grade",
+     "delta": 0.2,
+     "label": "A: feedback -> grade, vmbo AND low income",
+     "when": {
+      "school_type": "vmbo",
+      "ses": "low"
+     }
+    },
+    {
+     "arrow": "motivation -> extra",
+     "delta": 0.2,
+     "label": "B: motivation -> extra, high income",
+     "when": {
+      "ses": "high"
+     }
+    }
+   ]
+  }
+ },
+ "factors": [
+  {
+   "levels": [
+    {
+     "arrows": [
+      "feedback -> motivation",
+      "sport -> extra",
+      "motivation -> extra",
+      "motivation -> grade",
+      "feedback -> grade",
+      "extra -> grade"
+     ],
+     "latents": [
+      "feedback",
+      "sport",
+      "motivation",
+      "extra",
+      "grade"
+     ],
+     "name": "M0_true"
+    },
+    {
+     "arrows": [
+      "feedback -> motivation",
+      "sport -> extra",
+      "motivation -> extra",
+      "motivation -> grade",
+      "extra -> grade"
+     ],
+     "latents": [
+      "feedback",
+      "sport",
+      "motivation",
+      "extra",
+      "grade"
+     ],
+     "name": "M1_no_feedback_grade"
+    },
+    {
+     "arrows": [
+      "feedback -> motivation",
+      "sport -> extra",
+      "motivation -> extra",
+      "motivation -> grade",
+      "feedback -> grade"
+     ],
+     "latents": [
+      "feedback",
+      "sport",
+      "motivation",
+      "extra",
+      "grade"
+     ],
+     "name": "M2_no_extra_grade"
+    },
+    {
+     "arrows": [
+      "feedback -> motivation",
+      "motivation -> extra",
+      "motivation -> grade",
+      "feedback -> grade",
+      "extra -> grade"
+     ],
+     "latents": [
+      "feedback",
+      "motivation",
+      "extra",
+      "grade"
+     ],
+     "name": "M3_no_sport"
+    },
+    {
+     "arrows": [
+      "feedback -> motivation",
+      "sport -> extra",
+      "motivation -> extra",
+      "motivation -> grade"
+     ],
+     "latents": [
+      "feedback",
+      "sport",
+      "motivation",
+      "extra",
+      "grade"
+     ],
+     "name": "M4_no_feedback_extra_grade"
+    },
+    {
+     "arrows": [
+      "feedback -> motivation",
+      "sport -> extra",
+      "motivation -> extra",
+      "motivation -> grade",
+      "feedback -> grade",
+      "extra -> grade",
+      "feedback -> extra"
+     ],
+     "latents": [
+      "feedback",
+      "sport",
+      "motivation",
+      "extra",
+      "grade"
+     ],
+     "name": "M5_plus_feedback_extra"
+    }
+   ],
+   "linked": [],
+   "path": "model"
+  },
+  {
+   "levels": [
+    "current",
+    "ent_z",
+    "cook"
+   ],
+   "linked": [],
+   "path": "method.emm.quality"
+  },
+  {
+   "levels": [
+    50,
+    250,
+    500
+   ],
+   "linked": [],
+   "path": "world.schools.n_schools"
+  },
+  {
+   "levels": [
+    0.1,
+    0.2,
+    0.4
+   ],
+   "linked": [
+    "world.twists.1.delta"
+   ],
+   "path": "world.twists.0.delta"
+  }
+ ],
+ "include_null_world": true,
+ "master_seed": 0,
+ "n_sim": 100,
+ "name": "exp2_models",
+ "presets": [
+  "current"
+ ]
+}

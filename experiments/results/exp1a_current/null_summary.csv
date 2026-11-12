@@ -1,0 +1,5 @@
+quality,schools,reps,threshold_95,median_top_quality,share_with_findings,scale_artifacts_per_run,most_common_top_finding
+current,50,100,0.692,0.3845,0.66,0,(none) (34%); gender=f AND ses=high (7%); gender=m AND ses=mid (5%)
+current,100,100,0.6897,0.3543,0.65,0,(none) (35%); gender=f AND school_type=havo (6%); school_type=vwo AND ses=mid (5%)
+current,250,100,0.6948,0.3455,0.69,0,(none) (31%); gender=m AND school_type=havo (4%); gender=m AND ses=low (4%)
+current,500,100,0.6926,0.3922,0.77,0,(none) (23%); gender=f AND school_type=vmbo (9%); gender=f AND ses=high (8%)

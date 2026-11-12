@@ -1,0 +1,25 @@
+# Experiment 1 (the `current` quality function): how big and how common must a twist be before the researcher's pipeline finds it?
+# Its null runs (same World, twists removed, level shifts kept) are Experiment 0.
+#
+# World: dutch_two_twists.yaml (twist A: feedback -> grade for vmbo AND low income; twist B: motivation -> extra
+# for high income), 20 students per school. Researcher's Model = the World's own arrows. Method: the `current`
+# preset (the researcher's pipeline). Every run is graded on the reported top 10, on the top 10 without steps (b)+(c)
+# and on the top 10 without step (d), all from the same search.
+#
+# Recovered = a top-10 subgroup on the planted path with the right sign, whose path also deviates under the run's
+# own rule, covering at least 80% the same students (tau 0.8: with 0.7, ses=low alone would count for vmbo AND
+# low income, because most low-income students are in VMBO).
+#
+# Run: uv run python experiments/run_experiments.py exp1a_current
+name: exp1a_current
+aim: Recovery of two planted twists by the current pipeline, by number of schools and twist size
+world: dutch_two_twists.yaml
+preset: current
+tau: 0.8
+n_sim: 100
+factors:
+  - path: world.schools.n_schools
+    levels: [50, 100, 250, 500]
+  - path: world.twists.0.delta
+    linked: [world.twists.1.delta]
+    levels: [0.05, 0.1, 0.2, 0.4]

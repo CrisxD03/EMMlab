@@ -1,0 +1,38 @@
+{
+ "master_seed": 20261101,
+ "plan": {
+  "no_subgroups": 1000,
+  "planted_fb_medium": 200,
+  "planted_size_medium": 200,
+  "planted_both_medium": 200
+ },
+ "error_sd": {
+  "feedback": 0.9862935668450848,
+  "selfeff": 0.9955721972815432,
+  "interest": 0.9422682760233414,
+  "enjoy": 0.9425594771684171,
+  "perfgoal": 0.9805823575814527,
+  "extrinsic": 0.9416248488649819,
+  "Achievement": 0.9355471582411332
+ },
+ "planted": {
+  "planted_fb_medium": {
+   "description": "school_fb_tertile=='medium'",
+   "size": 1680,
+   "inside": -0.06599253427679191,
+   "outside": -0.17101675570218083
+  },
+  "planted_size_medium": {
+   "description": "school_size_tertile=='medium'",
+   "size": 1571,
+   "inside": -0.06795318745665235,
+   "outside": -0.171439483842921
+  },
+  "planted_both_medium": {
+   "description": "school_fb_tertile=='medium' AND school_size_tertile=='medium'",
+   "size": 601,
+   "inside": -0.014456359043565986,
+   "outside": -0.15291244509091204
+  }
+ }
+}

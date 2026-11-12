@@ -1,0 +1,21 @@
+# Simpson's paradox from level shifts (research/04 §2.3): within each school type the slope
+# is -0.20, pooled it is +0.30.
+name: simpson
+description: Within-group slope -0.20 becomes +0.30 pooled because rich schools shift both variables.
+schools:
+  n_schools: 200
+  students_per_school: {dist: fixed, n: 35}
+attributes:
+  ses:
+    level: school
+    values: {poor: 0.5, rich: 0.5}
+nodes:
+  feedback:
+    recipe: {intercept: 0.0, noise_sd: 1.0}
+  achievement:
+    recipe: {intercept: 0.0, noise_sd: 1.0}
+arrows:
+  - {from: feedback, to: achievement, slope: -0.20}
+shifts:
+  - {when: {ses: rich}, target: feedback, delta: 2.0}
+  - {when: {ses: rich}, target: achievement, delta: 2.0}

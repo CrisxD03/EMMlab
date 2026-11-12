@@ -1,0 +1,26 @@
+# Range-restriction decoy (research/01 §4): the raw slope is 0.40 everywhere, but feedback
+# tracks SES almost one-to-one, so a top-SES subgroup has restricted feedback variance and a
+# smaller within-subgroup standardized coefficient. Recommended (common metric) should not
+# flag it; current (within-subgroup standardization) may.
+name: variance_decoy
+description: >-
+  No twists. Feedback is driven by a continuous SES attribute; achievement = 0.4 x feedback.
+  Within-subgroup standardization fakes an exceptional top-SES subgroup.
+schools:
+  n_schools: 400
+  students_per_school: {dist: fixed, n: 50}
+attributes:
+  gender:
+    level: student
+    values: {m: 0.5, f: 0.5}
+nodes:
+  ses:
+    kind: attribute
+    root: {mean: 0.0, sd: 1.0}
+  feedback:
+    recipe: {intercept: 0.0, noise_sd: 0.05}
+  achievement:
+    recipe: {intercept: 0.0, noise_sd: 1.0}
+arrows:
+  - {from: ses, to: feedback, slope: 1.0}
+  - {from: feedback, to: achievement, slope: 0.40}

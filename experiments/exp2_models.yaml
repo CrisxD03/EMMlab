@@ -1,0 +1,37 @@
+# Experiment 2: what happens when the Researcher's Model is slightly wrong?
+#
+# Same World as Experiment 1 (dutch_two_twists.yaml); same seeds, so every model sees the same datasets.
+# Each model starts from the World's own arrows and changes one or two things a researcher could plausibly get wrong:
+#   M0 true arrows (baseline, = the model of exp1a_current);
+#   M1 no feedback -> grade: "feedback only works through motivation" (full mediation); this is twist A's arrow,
+#      so A is graded on the model path where its effect lands instead (column `path` in runs.csv);
+#   M2 no extra -> grade: "extracurriculars don't count for exam grades" (a small arrow downstream of twist B);
+#   M3 no sport: "we didn't measure sport" (an unmeasured cause in twist B's equation; not searchable either:
+#      every model searches the World's attributes only);
+#   M4 M1 + M2: "grade depends on motivation only";
+#   M5 an extra feedback -> extra arrow: "feedback encourages activities" (true slope 0).
+# Three quality measures (current, ent_z, cook) at three sizes (50 / 250 / 500 schools) and three twist sizes
+# (Δ 0.1 / 0.2 / 0.4, both twists). Each model x measure x size gets its own null runs.
+#
+# Run: uv run python experiments/run_experiments.py exp2_models
+name: exp2_models
+aim: Recovery of the two twists when the Researcher's Model misses, or adds, an arrow
+world: dutch_two_twists.yaml
+preset: current
+tau: 0.8
+n_sim: 100
+models:  # changes to the World's own arrows; the runner turns these into a factor on `model`
+  M0_true: {}
+  M1_no_feedback_grade: {drop: [feedback -> grade]}
+  M2_no_extra_grade: {drop: [extra -> grade]}
+  M3_no_sport: {drop_latents: [sport]}
+  M4_no_feedback_extra_grade: {drop: [feedback -> grade, extra -> grade]}
+  M5_plus_feedback_extra: {add: [feedback -> extra]}
+factors:
+  - path: method.emm.quality
+    levels: [current, ent_z, cook]
+  - path: world.schools.n_schools
+    levels: [50, 250, 500]
+  - path: world.twists.0.delta
+    linked: [world.twists.1.delta]
+    levels: [0.1, 0.2, 0.4]

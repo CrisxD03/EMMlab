@@ -1,0 +1,84 @@
+# A Dutch secondary-school World (not tied to any paper): three tracks, family income, gender and five latents.
+#
+# School types (placement at about age 12): VMBO (4 years, prevocational, the largest group), HAVO (5 years,
+# leads to HBO), VWO (6 years, leads to university). Track shares follow PISA (52 / 22 / 27 %, rescaled to sum
+# to 1); the income table and all effect sizes are illustrative assumptions, not measured values.
+#
+# Deliberate features, so that every lesson from the review meeting has something to show:
+#   - a confound: low family income is concentrated in VMBO, high income in VWO (Cramer's V about 0.24);
+#     nothing in the equations makes income depend on track, they are only correlated;
+#   - gender is a level shift only (girls: more feedback, more motivation, higher exam grade, less sport
+#     enjoyment), with no twist, so a search should NOT report gender (a built-in negative control);
+#   - `sport` has no effect on the exam grade except a tiny indirect one, but sport and grade are negatively
+#     correlated through gender: a model with an arrow sport -> grade would find a spurious negative slope;
+#   - one planted twist: motivation matters more for the exam grade when family income is low. Because low
+#     income sits mostly in VMBO, `school_type=vmbo` is expected to show up as a proxy.
+# Shifts are in SD units (every latent has total SD 1).
+name: dutch_tracks
+layout_direction: RIGHT  # draw the canvas left to right
+description: >-
+  Dutch secondary school: VMBO / HAVO / VWO tracks correlated with family income, gender level shifts, latents
+  feedback, motivation, sport enjoyment, extracurricular activities and exam grade, one planted twist
+  (motivation -> grade stronger for low income). Illustrative numbers.
+schools:
+  n_schools: 150
+  students_per_school: {dist: fixed, n: 30}
+attributes:
+  school_type:
+    level: school
+    values: {vmbo: 0.515, havo: 0.218, vwo: 0.267}
+  ses:
+    level: student
+    ordinal: true
+    values: {low: 0.29, mid: 0.46, high: 0.25}  # implied by the table and the track shares
+    depends_on: school_type
+    table:
+      vmbo: {low: 0.40, mid: 0.45, high: 0.15}
+      havo: {low: 0.25, mid: 0.50, high: 0.25}
+      vwo: {low: 0.12, mid: 0.43, high: 0.45}
+    label: family income
+  gender:
+    level: student
+    values: {m: 0.5, f: 0.5}
+nodes:
+  feedback:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: feedback from teachers
+  sport:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: sport enjoyment
+  motivation:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: motivation to study
+  extra:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: extracurricular activities
+  grade:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0}
+    label: standardized exam grade
+arrows:
+  - {from: feedback, to: motivation, slope: 0.25}
+  - {from: sport, to: extra, slope: 0.30}
+  - {from: motivation, to: extra, slope: 0.20}
+  - {from: motivation, to: grade, slope: 0.25}
+  - {from: feedback, to: grade, slope: 0.10}
+  - {from: extra, to: grade, slope: 0.10}
+shifts:
+  - {when: {gender: f}, target: feedback, delta: 0.10}
+  - {when: {gender: f}, target: sport, delta: -0.30}
+  - {when: {gender: f}, target: motivation, delta: 0.10}
+  - {when: {school_type: havo}, target: motivation, delta: 0.05}
+  - {when: {school_type: vwo}, target: motivation, delta: 0.15}
+  - {when: {ses: high}, target: extra, delta: 0.15}
+  - {when: {gender: f}, target: grade, delta: 0.15}
+  - {when: {school_type: havo}, target: grade, delta: 0.30}
+  - {when: {school_type: vwo}, target: grade, delta: 0.55}
+  - {when: {ses: mid}, target: grade, delta: 0.10}
+  - {when: {ses: high}, target: grade, delta: 0.20}
+twists:
+  - {arrow: motivation -> grade, when: {ses: low}, delta: 0.15, label: motivation matters more when parents cannot compensate}

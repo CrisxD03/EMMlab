@@ -1,0 +1,102 @@
+# Katsantonis, McLellan & Torres (2023), Frontiers in Psychology 14:1124189, Figure 2 (Model B, Level 1).
+# S0 = the published structure, with the published within-school standardized paths treated as the truth.
+#
+# Source numbers (the paper's Figure 2 and Table 2):
+#   - Greek PISA 2015: 5,532 students in 211 schools (about 26 per school), so 211 x 26 here.
+#   - ICCs from Table 2: feedback .084, selfeff .025, interest .082, enjoy .055, perfgoal .033,
+#     extrinsic .023, achievement .414.
+#   - 15 latent -> latent paths from Figure 2 and gender (female) -> feedback -0.165, -> achievement -0.058.
+#
+# Why the raw slopes are not the published numbers: Figure 2 is a Level-1 (within-school) standardized
+# solution. Every node here has total SD 1 and SD_within = sqrt(1 - ICC), so
+#   raw slope = beta x SD_within(child) / SD_within(parent)
+# makes the school-centred, standardized-once fit reproduce Figure 2 (T3 in the Researcher's Model tab).
+# Gender is an attribute, so its paths are level shifts: delta = beta x SD_within(child) / SD(gender),
+# with SD(gender) = 0.5 for a 50/50 0/1 attribute.
+#
+# Not modelled (S0 only): school type and the Level-2 feedback -> achievement path (-0.799 between
+# schools), and the extra arrows of S1-S3 (Gender -> selfeff, perfgoal -> extrinsic). Gender is not
+# in the Researcher's Model (attributes never are), so the fit has 15 paths, not Figure 2's 17.
+# Additions NOT in the paper (illustrative): school_type (school level) and qcsc (student level)
+# shift achievement only, so they leave the fitted paths at their Figure 2 values, and one planted
+# twist: selfeff -> achievement is +0.10 stronger for qcsc=poor. The base slope is lowered by
+# 0.10 x P(poor) = 0.0305 so the average slope (what the fit estimates) stays at the Figure 2 value.
+name: katsantonis_s0
+description: >-
+  Katsantonis et al. (2023) Figure 2 as a World: feedback, self-efficacy, four motivators and
+  achievement (15 paths) with gender level shifts, Greek PISA 2015 size and Table 2 ICCs, plus
+  school_type and qcsc attributes and one planted twist (selfeff -> achievement for poor students).
+schools:
+  n_schools: 211
+  students_per_school: {dist: fixed, n: 26}
+attributes:
+  gender:
+    level: student
+    values: {m: 0.5, f: 0.5}
+  school_type:
+    level: school
+    values: {small: 0.30, medium: 0.45, big: 0.25}
+  qcsc:
+    level: student
+    ordinal: true
+    values: {poor: 0.30, medium: 0.45, rich: 0.25}
+    depends_on: school_type
+    table:
+      small: {poor: 0.40, medium: 0.40, rich: 0.20}
+      medium: {poor: 0.30, medium: 0.45, rich: 0.25}
+      big: {poor: 0.20, medium: 0.45, rich: 0.35}
+nodes:
+  feedback:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.084}
+    label: teachers' feedback
+  selfeff:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.025}
+    label: science self-efficacy
+  interest:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.082}
+    label: interest in science
+  enjoy:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.055}
+    label: enjoyment of science
+  perfgoal:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.033}
+    label: performance-approach goals
+  extrinsic:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.023}
+    label: extrinsic motivation
+  achievement:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.414}
+    label: science achievement
+arrows:
+  # published beta in the comment
+  - {from: feedback, to: selfeff, slope: 0.0970}  # 0.094
+  - {from: feedback, to: interest, slope: 0.1562}  # 0.156
+  - {from: feedback, to: enjoy, slope: 0.1666}  # 0.164
+  - {from: feedback, to: extrinsic, slope: 0.1250}  # 0.121
+  - {from: feedback, to: perfgoal, slope: 0.0308}  # 0.030, not significant in the paper
+  - {from: feedback, to: achievement, slope: -0.1080}  # -0.135
+  - {from: selfeff, to: interest, slope: 0.2736}  # 0.282
+  - {from: selfeff, to: enjoy, slope: 0.2717}  # 0.276
+  - {from: selfeff, to: perfgoal, slope: 0.1902}  # 0.191
+  - {from: selfeff, to: extrinsic, slope: 0.3033}  # 0.303
+  - {from: selfeff, to: achievement, slope: 0.0618}  # 0.119 on average, see the twist
+  - {from: interest, to: achievement, slope: 0.1438}  # 0.180
+  - {from: enjoy, to: achievement, slope: 0.1520}  # 0.193
+  - {from: perfgoal, to: achievement, slope: 0.0615}  # 0.079
+  - {from: extrinsic, to: achievement, slope: -0.0472}  # -0.061
+shifts:
+  - {when: {gender: f}, target: feedback, delta: -0.3158}  # -0.165
+  - {when: {gender: f}, target: achievement, delta: -0.0888}  # -0.058
+  - {when: {school_type: medium}, target: achievement, delta: 0.10}
+  - {when: {school_type: big}, target: achievement, delta: 0.25}
+  - {when: {qcsc: medium}, target: achievement, delta: 0.10}
+  - {when: {qcsc: rich}, target: achievement, delta: 0.25}
+twists:
+  - {arrow: selfeff -> achievement, when: {qcsc: poor}, delta: 0.10, label: self-efficacy matters more for poor students}

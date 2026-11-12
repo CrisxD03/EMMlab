@@ -1,0 +1,87 @@
+# PISA-2015-like World (system_design §5.1, research/03-multilevel-pisa.md §F).
+# Mechanism (one explanation from the literature, not a fact): teachers target weaker
+# students, so unobserved prior achievement lowers feedback and raises achievement. That
+# produces the negative pooled feedback -> achievement association reported by OECD (2016)
+# and Katsantonis et al. (2023). The planted twist makes feedback help girls more.
+name: pisa_like
+description: >-
+  PISA-like World: 200 schools x 35 students, realistic ICCs, school types and SES quartiles,
+  gender gaps in self-efficacy and feedback, a hidden prior-achievement targeting mechanism,
+  a decoy attribute, and one planted twist (feedback -> achievement stronger for girls).
+schools:
+  n_schools: 200
+  students_per_school: {dist: fixed, n: 35}
+attributes:
+  school_type:
+    level: school
+    values: {academic: 0.4, general: 0.4, vocational: 0.2}
+  ses_q:
+    level: student
+    ordinal: true
+    values: {q1: 0.25, q2: 0.25, q3: 0.25, q4: 0.25}
+    depends_on: school_type
+    table:
+      academic: {q1: 0.15, q2: 0.20, q3: 0.30, q4: 0.35}
+      general: {q1: 0.25, q2: 0.25, q3: 0.25, q4: 0.25}
+      vocational: {q1: 0.40, q2: 0.30, q3: 0.20, q4: 0.10}
+  gender:
+    level: student
+    values: {m: 0.5, f: 0.5}
+  immigrant:
+    level: student
+    values: {native: 0.85, immigrant: 0.15}
+  football:
+    level: student
+    role: decoy
+    values: {no: 0.5, yes: 0.5}
+nodes:
+  school_size:
+    kind: attribute
+    level: school
+    role: decoy
+    root: {mean: 600, sd: 250}
+  prior_ach:
+    observed: false
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.25}
+    label: prior achievement (unobserved)
+  feedback:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.10}
+  selfeff:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.03}
+  enjoyment:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.05}
+  interest:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.08}
+  achievement:
+    recipe: {intercept: 0.0}
+    target: {sd: 1.0, icc: 0.40}
+arrows:
+  - {from: prior_ach, to: feedback, slope: -0.45}
+  - {from: prior_ach, to: selfeff, slope: 0.20}
+  - {from: prior_ach, to: achievement, slope: 0.55}
+  - {from: feedback, to: selfeff, slope: 0.10}
+  - {from: feedback, to: enjoyment, slope: 0.28}
+  - {from: feedback, to: interest, slope: 0.16}
+  - {from: selfeff, to: enjoyment, slope: 0.30}
+  - {from: enjoyment, to: interest, slope: 0.30}
+  - {from: selfeff, to: achievement, slope: 0.12}
+  - {from: enjoyment, to: achievement, slope: 0.15}
+  - {from: interest, to: achievement, slope: 0.10}
+  - {from: feedback, to: achievement, slope: 0.05}
+shifts:
+  - {when: {school_type: academic}, target: prior_ach, delta: 0.40}
+  - {when: {school_type: vocational}, target: prior_ach, delta: -0.60}
+  - {when: {ses_q: q1}, target: prior_ach, delta: -0.30}
+  - {when: {ses_q: q4}, target: prior_ach, delta: 0.30}
+  - {when: {immigrant: immigrant}, target: prior_ach, delta: -0.20}
+  - {when: {school_type: vocational}, target: feedback, delta: 0.15}
+  - {when: {gender: f}, target: feedback, delta: -0.17}
+  - {when: {gender: f}, target: selfeff, delta: -0.20}
+  - {when: {gender: f}, target: interest, delta: -0.15}
+twists:
+  - {arrow: feedback -> achievement, when: {gender: f}, delta: 0.20, label: feedback helps girls more}

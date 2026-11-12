@@ -1,0 +1,31 @@
+# World A from research/04-path-model-math.md: the teaching example.
+# Rich schools get more feedback and higher achievement (level shifts), and feedback's
+# effect on achievement flips sign in rich schools (the twist).
+name: minimal
+description: >-
+  Teaching World (R4 "World A"): feedback -> selfeff -> achievement, school SES level shifts,
+  and a twist that flips feedback -> achievement in rich schools.
+schools:
+  n_schools: 200
+  students_per_school: {dist: fixed, n: 35}
+attributes:
+  ses:
+    level: school
+    values: {poor: 0.5, rich: 0.5}
+    ordinal: true
+nodes:
+  feedback:
+    recipe: {intercept: 0.0, noise_sd: 1.0}
+  selfeff:
+    recipe: {intercept: 0.0, noise_sd: 0.9}
+  achievement:
+    recipe: {intercept: 0.0, noise_sd: 0.8}
+arrows:
+  - {from: feedback, to: selfeff, slope: 0.30}
+  - {from: selfeff, to: achievement, slope: 0.25}
+  - {from: feedback, to: achievement, slope: 0.20}
+shifts:
+  - {when: {ses: rich}, target: feedback, delta: 0.6}
+  - {when: {ses: rich}, target: achievement, delta: 0.5}
+twists:
+  - {arrow: feedback -> achievement, when: {ses: rich}, delta: -0.40, label: rich schools flip}

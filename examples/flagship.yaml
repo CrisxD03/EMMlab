@@ -1,0 +1,312 @@
+# Flagship Experiment 1 (system_design §9)
+name: flagship
+aim: Does the current method tell the truth, and what changes would fix it? 
+  current vs recommended on pisa_like, twist size x replications.
+base:
+  world:
+    name: pisa_like
+    description: 'PISA-like World: 200 schools x 35 students, realistic ICCs, school
+      types and SES quartiles, gender gaps in self-efficacy and feedback, a hidden
+      prior-achievement targeting mechanism, a decoy attribute, and one planted twist
+      (feedback -> achievement stronger for girls).'
+    schools:
+      n_schools: 200
+      students_per_school:
+        dist: fixed
+        n: 35
+        min: 2
+        max: 60
+      allocation: stratified
+    attributes:
+      school_type:
+        level: school
+        role: normal
+        values:
+          academic: 0.4
+          general: 0.4
+          vocational: 0.2
+        ordinal: false
+      ses_q:
+        level: student
+        role: normal
+        values:
+          q1: 0.25
+          q2: 0.25
+          q3: 0.25
+          q4: 0.25
+        depends_on: school_type
+        table:
+          academic:
+            q1: 0.15
+            q2: 0.2
+            q3: 0.3
+            q4: 0.35
+          general:
+            q1: 0.25
+            q2: 0.25
+            q3: 0.25
+            q4: 0.25
+          vocational:
+            q1: 0.4
+            q2: 0.3
+            q3: 0.2
+            q4: 0.1
+        ordinal: true
+      gender:
+        level: student
+        role: normal
+        values:
+          m: 0.5
+          f: 0.5
+        ordinal: false
+      immigrant:
+        level: student
+        role: normal
+        values:
+          native: 0.85
+          immigrant: 0.15
+        ordinal: false
+      football:
+        level: student
+        role: decoy
+        values:
+          no: 0.5
+          yes: 0.5
+        ordinal: false
+    nodes:
+      school_size:
+        kind: attribute
+        level: school
+        role: decoy
+        root:
+          mean: 600.0
+          sd: 250.0
+        school_sd: 0.0
+        observed: true
+        reliability_when: []
+      prior_ach:
+        kind: latent
+        level: student
+        role: normal
+        recipe:
+          intercept: 0.0
+        target:
+          sd: 1.0
+          icc: 0.25
+        school_sd: 0.0
+        observed: false
+        reliability_when: []
+        label: prior achievement (unobserved)
+      feedback:
+        kind: latent
+        level: student
+        role: normal
+        recipe:
+          intercept: 0.0
+        target:
+          sd: 1.0
+          icc: 0.1
+        school_sd: 0.0
+        observed: true
+        reliability_when: []
+      selfeff:
+        kind: latent
+        level: student
+        role: normal
+        recipe:
+          intercept: 0.0
+        target:
+          sd: 1.0
+          icc: 0.03
+        school_sd: 0.0
+        observed: true
+        reliability_when: []
+      enjoyment:
+        kind: latent
+        level: student
+        role: normal
+        recipe:
+          intercept: 0.0
+        target:
+          sd: 1.0
+          icc: 0.05
+        school_sd: 0.0
+        observed: true
+        reliability_when: []
+      interest:
+        kind: latent
+        level: student
+        role: normal
+        recipe:
+          intercept: 0.0
+        target:
+          sd: 1.0
+          icc: 0.08
+        school_sd: 0.0
+        observed: true
+        reliability_when: []
+      achievement:
+        kind: latent
+        level: student
+        role: normal
+        recipe:
+          intercept: 0.0
+        target:
+          sd: 1.0
+          icc: 0.4
+        school_sd: 0.0
+        observed: true
+        reliability_when: []
+    arrows:
+    - from: prior_ach
+      to: feedback
+      slope: -0.45
+    - from: prior_ach
+      to: selfeff
+      slope: 0.2
+    - from: prior_ach
+      to: achievement
+      slope: 0.55
+    - from: feedback
+      to: selfeff
+      slope: 0.1
+    - from: feedback
+      to: enjoyment
+      slope: 0.28
+    - from: feedback
+      to: interest
+      slope: 0.16
+    - from: selfeff
+      to: enjoyment
+      slope: 0.3
+    - from: enjoyment
+      to: interest
+      slope: 0.3
+    - from: selfeff
+      to: achievement
+      slope: 0.12
+    - from: enjoyment
+      to: achievement
+      slope: 0.15
+    - from: interest
+      to: achievement
+      slope: 0.1
+    - from: feedback
+      to: achievement
+      slope: 0.05
+    shifts:
+    - when:
+        school_type: academic
+      target: prior_ach
+      delta: 0.4
+    - when:
+        school_type: vocational
+      target: prior_ach
+      delta: -0.6
+    - when:
+        ses_q: q1
+      target: prior_ach
+      delta: -0.3
+    - when:
+        ses_q: q4
+      target: prior_ach
+      delta: 0.3
+    - when:
+        immigrant: immigrant
+      target: prior_ach
+      delta: -0.2
+    - when:
+        school_type: vocational
+      target: feedback
+      delta: 0.15
+    - when:
+        gender: f
+      target: feedback
+      delta: -0.17
+    - when:
+        gender: f
+      target: selfeff
+      delta: -0.2
+    - when:
+        gender: f
+      target: interest
+      delta: -0.15
+    twists:
+    - arrow: feedback -> achievement
+      when:
+        gender: f
+      delta: 0.2
+      label: feedback helps girls more
+    generation: naive
+  model:
+    name: pisa_like_model
+    latents:
+    - feedback
+    - selfeff
+    - enjoyment
+    - interest
+    - achievement
+    arrows:
+    - feedback -> selfeff
+    - feedback -> enjoyment
+    - feedback -> interest
+    - selfeff -> enjoyment
+    - enjoyment -> interest
+    - selfeff -> achievement
+    - enjoyment -> achievement
+    - interest -> achievement
+    - feedback -> achievement
+  method:
+    name: recommended
+    analysis:
+      normalisation: centered
+      standardize: global_once
+      residualize_on: []
+      residualize_method: total_effect
+      se: cluster
+      weights: none
+      pv_mode: rubin
+      brr_fay_k: 0.5
+    emm:
+      quality: ent_z
+      baseline: complement
+      paths: all
+      algorithm: beam
+      beam_width: 20
+      top_k: 10
+      interval_level: 0.95
+      exact_bootstrap_reps: 99
+      nominal_min_schools: 25
+  search:
+    binning: {}
+    default_binning:
+      n_bins: 5
+      one_sided: true
+      weighting: students
+    depth: 2
+    min_n: 100
+    min_n_complement: 100
+    min_schools: 0
+  grading:
+    tau: 0.7
+    proxy_min_jaccard: 0.3
+    epsilon: 0.02
+    oracle_students: 400000
+  permutation_reps: 0
+  holdout: false
+  seed: 0
+presets:
+- current
+- recommended
+factors:
+- path: world.twists.0.delta
+  levels:
+  - 0.05
+  - 0.1
+  - 0.15
+  - 0.2
+  - 0.25
+  - 0.3
+n_sim: 200
+master_seed: 0
+include_null_world: true

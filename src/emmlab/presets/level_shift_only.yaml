@@ -1,0 +1,31 @@
+# Baseline lesson (vision Part 6): a school attribute shifts BOTH feedback and achievement.
+# Within every group the slope is the same, so comparing a subgroup with its complement finds
+# nothing, but comparing with the confounded pooled population "finds" the attribute.
+name: level_shift_only
+description: >-
+  No twists. School type shifts feedback and achievement (Simpson-style confounding when
+  normalisation is none). Complement baseline should find nothing; population baseline does.
+schools:
+  n_schools: 200
+  students_per_school: {dist: fixed, n: 35}
+attributes:
+  school_type:
+    level: school
+    values: {general: 0.5, academic: 0.5}
+  gender:
+    level: student
+    values: {m: 0.5, f: 0.5}
+  football:
+    level: student
+    role: decoy
+    values: {no: 0.5, yes: 0.5}
+nodes:
+  feedback:
+    recipe: {intercept: 0.0, noise_sd: 1.0}
+  achievement:
+    recipe: {intercept: 0.0, noise_sd: 1.0}
+arrows:
+  - {from: feedback, to: achievement, slope: -0.10}
+shifts:
+  - {when: {school_type: academic}, target: feedback, delta: 1.5}
+  - {when: {school_type: academic}, target: achievement, delta: 1.5}

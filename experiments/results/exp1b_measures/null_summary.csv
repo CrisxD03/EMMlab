@@ -1,0 +1,9 @@
+quality,schools,reps,threshold_95,median_top_quality,share_with_findings,scale_artifacts_per_run,most_common_top_finding
+cook,50,100,63.25,29.17,1,0,ses=high AND school_type=vwo (10%); gender=m AND school_type=havo (8%); gender=f AND ses=high (8%)
+cook,100,100,85.47,41.21,1,0,ses=low AND school_type=havo (22%); ses=high AND school_type=havo (17%); school_type=havo AND ses=low (11%)
+cook,250,100,145.3,61.35,1,0,ses=low AND school_type=vwo (39%); school_type=vwo AND ses=low (19%); ses=high AND school_type=havo (13%)
+cook,500,100,125.4,57.82,1,0,ses=low AND school_type=vwo (37%); school_type=vwo AND ses=low (15%); ses=low AND school_type=havo (8%)
+ent_z,50,100,2.959,2.264,1,0,ses=mid (21%); school_type=vmbo (14%); gender=f (13%)
+ent_z,100,100,2.959,2.139,1,0,school_type=vmbo (17%); ses=mid (16%); ses=low (13%)
+ent_z,250,100,2.918,2.076,1,0,ses=mid (27%); school_type=vmbo (14%); school_type=vwo (11%)
+ent_z,500,100,3.08,2.255,1,0,ses=mid (25%); school_type=vmbo (19%); gender=m (10%)
