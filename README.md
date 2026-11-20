@@ -4,19 +4,37 @@ EMMlab is a ground-truth laboratory for Exceptional Model Mining (EMM) on path m
 
 ## Requirements
 
-- macOS or Linux, with `make`
 - Python 3.12 or newer, installed through [uv](https://docs.astral.sh/uv/) (uv can fetch Python itself)
 - Node 22 and pnpm 10 for the web app (tested with these versions); if `pnpm` is missing, run `npm install -g pnpm@10` first
+- macOS or Linux: also `make`
+- Windows: no `make` needed; see the Windows steps below
 
-`make sync` then installs every Python and web library from the lock files (`uv.lock`, `web/pnpm-lock.yaml`), so there is nothing to install by hand.
+The install steps below fetch every Python and web library from the lock files (`uv.lock`, `web/pnpm-lock.yaml`), so there is nothing to install by hand.
 
 ## Quickstart
+
+### macOS and Linux
 
 ```bash
 make sync     # installs Python and web dependencies
 make serve    # builds the web app and serves it at http://127.0.0.1:8765
 make check    # ruff, basedpyright, pytest, web type-check, lint and tests
 ```
+
+### Windows (PowerShell)
+
+`make` is not available on Windows by default, so run the steps it wraps:
+
+```powershell
+uv sync                                # installs Python dependencies
+pnpm -C web install                    # installs web dependencies
+pnpm -C web build                      # builds the web app
+uv run lab serve --port 8765           # serves it at http://127.0.0.1:8765
+```
+
+For the checks, run `uv run ruff check src tests`, `uv run basedpyright`, `uv run pytest -q`, then `pnpm -C web run check` and `pnpm -C web test`.
+
+**Platform status:** EMMlab was developed and tested on macOS. Windows has not been tested. It is expected to work, since the Python code uses portable paths and the `spawn` process model, but it is unverified. Known Windows gaps: `make` and the `.sh` scripts (`scripts/smoke_clean_clone.sh`, `experiments/exp4_published_model/env.sh`) need WSL or Git Bash, and `scripts/offline_preview.py` may need `npx` available as `npx.cmd`. Please report any Windows problems as an issue.
 
 ## Command line
 
